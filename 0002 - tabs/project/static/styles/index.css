@@ -1,0 +1,116 @@
+:root {
+  --color_txt_titles: #122536;
+  --color_txt_content: #76848d;
+  --color_bg: #f1f5f8;
+  --color_article_bg: #ffffff;
+  --color_tab_deactive: #d9e3ed;
+  --color_tab_border: #4e6d9c;
+  --color_tab_hover: #4e9c8b;
+}
+
+* {
+  color: var(--color_txt_content);
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+}
+
+body {
+  padding: 0;
+  background-color: var(--color_bg);
+}
+
+.section {
+  padding: 10px;
+}
+
+.section, header, #picture, article, ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#section_main, header, article {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+header {
+  margin-top: 50px;
+}
+
+header h1, header p {
+  margin: auto;
+}
+
+.title {
+  color: var(--color_txt_titles);
+}
+
+#picture, article, img {
+  border-radius: 10px;
+}
+
+#section_content {
+  gap: 10px;
+  padding: auto 10px;
+  margin: 50px auto 0 auto;
+  height: 400px;
+}
+
+#section_content #picture, #section_content article {
+  margin: auto;
+  width: 600px;
+  height: 100%;
+}
+
+#section_content #picture img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#section_content article {
+  background-color: var(--color_article_bg);
+}
+
+#section_content article ul {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 50px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: var(--color_tab_deactive);
+}
+
+#section_content article ul .tab {
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  border: solid 2px var(--color_tab_deactive);
+  background-color: var(--color_tab_deactive);
+  cursor: pointer;
+}
+
+#section_content article ul .tab:hover {
+  background-color: var(--color_tab_hover);
+}
+
+#section_content article ul .tab:first-child {
+  background-color: var(--color_article_bg);
+  border-color: var(--color_tab_border);
+  border-radius: 5px;
+}
+
+#section_content article ul .tab:last-child {
+  border-top-right-radius: 10px;
+}
+
+#section_content article #container {
+  padding: 20px;
+}
+/*# sourceMappingURL=index.css.map */

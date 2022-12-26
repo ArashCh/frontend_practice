@@ -5,28 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robot" content="noindex,nofollow">
+    <link rel="stylesheet" href="./static/styles/index.css">
     <title>Tabs (0002)</title>
 </head>
 <body>
-    <header>
-        <h1 id="page_title">About</h1>
-        <p id="sub_title">Lorem ipsum dolor sit amet consectetur, adipisicing elit. aperiam!</p>
-    </header>
-    <section>
-        <picture id="picture">
-            <img id="img" src="" alt="">
-        </picture>
-        <article>
-            <nav>
-                <p class="tab" id="tab_motorsports">Motosports</p>
-                <p class="tab" id="tab_fighter">Fighter Aircrafts</p>
-                <p class="tab" id="tab_programming">Programming</p>
-            </nav>
-            <div id="container">
-                <h2 id="desc_title">Motosports</h2>
-                <p id="desc_content"></p>
-            </div>
-        </article>
+    <section class="section" id="section_main">
+        <header>
+            <h1 class="title" id="page_title">About</h1>
+            <p id="sub_title">Lorem ipsum dolor sit amet consectetur, adipisicing elit. aperiam!</p>
+        </header>
+        <section class="section" id="section_content">
+            <picture id="picture">
+                <img id="img" src="./static/media/motorsports.jpg" alt="motorsports">
+            </picture>
+            <article>
+                <ul>
+                    <li class="tab" id="tab_motorsports"><p class="title">Motosports</p></li>
+                    <li class="tab" id="tab_fighter"><p class="title">Fighter Aircrafts</p></li>
+                    <li class="tab" id="tab_programming"><p class="title">Programming</p></li>
+                </ul>
+                <div id="container">
+                    <h2 class="title" id="desc_title">Motosports</h2>
+                    <p id="desc_content"></p>
+                </div>
+            </article>
+        </section>
     </section>
+    <script src="./static/js/index.js"></script>
 </body>
 </html>

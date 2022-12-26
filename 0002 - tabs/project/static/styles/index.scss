@@ -1,0 +1,89 @@
+:root {
+    --color_txt_titles: #122536;
+    --color_txt_content: #76848d;
+    --color_bg: #f1f5f8;
+    --color_article_bg: #ffffff;
+    --color_tab_deactive: #d9e3ed;
+    --color_tab_border: #4e6d9c;
+    --color_tab_hover: #4e9c8b;
+}
+* {
+    color: var(--color_txt_content);
+    transition-duration: 300ms;
+}
+body {
+    padding: 0;
+    background-color: var(--color_bg);
+}
+.section {
+    padding: 10px;
+}
+.section, header, #picture, article, ul {
+    display: flex;
+}
+#section_main, header, article {
+    flex-direction: column;
+}
+header {
+    margin-top: 50px;
+    h1, p {
+        margin: auto;
+    }
+}
+.title {
+    color: var(--color_txt_titles);
+}
+#picture, article, img {
+    border-radius: 10px;
+}
+#section_content {
+    gap: 10px;
+    padding: auto 10px;
+    margin: 50px auto 0 auto;
+    height: 400px;
+    #picture, article {
+        margin: auto;
+        width: 600px;
+        height: 100%;
+    }
+    #picture {
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    article {
+        background-color: var(--color_article_bg);
+        ul {
+            justify-content: space-evenly;
+            height: 50px;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            background-color: var(--color_tab_deactive);
+            .tab {
+                list-style: none;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                border: solid 2px var(--color_tab_deactive);
+                background-color: var(--color_tab_deactive);
+                cursor: pointer;
+            }
+            .tab:hover {
+                background-color: var(--color_tab_hover);
+            }
+            .tab:first-child {
+                background-color: var(--color_article_bg);
+                border-color: var(--color_tab_border);
+                border-radius: 5px;
+            }
+            .tab:last-child{
+                border-top-right-radius: 10px;
+            }
+        }
+        #container {
+            padding: 20px;
+        }
+    }
+}
