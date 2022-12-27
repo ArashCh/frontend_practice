@@ -59,6 +59,14 @@ $(".tab").click(event => {
 function setTabsStyle(tabId) {
     $(".tab").css("background-color", "#d9e3ed");
     $(".tab").css("border-color", "#d9e3ed");
+    $(".tab").css("border-radius", "0");
+    if (tabId != "tab_motorsports") {
+        $("#tab_motorsports").css("border-top-left-radius", "10px");
+    }
+    if (tabId != "tab_programming") {
+        $("#tab_programming").css("border-top-right-radius", "10px");
+    }
     $("#"+tabId).css("background-color", "#ffffff");
     $("#"+tabId).css("border", "solid 2px #4e6d9c");
+    $("#"+tabId).css("border-radius", "5px");
 }

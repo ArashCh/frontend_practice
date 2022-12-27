@@ -102,7 +102,7 @@ header h1, header p {
 #section_content article nav .tab:first-child {
   background-color: var(--color_article_bg);
   border-color: var(--color_tab_border);
-  border-radius: 5px;
+  border-radius: 7px;
 }
 
 #section_content article nav .tab:last-child {
