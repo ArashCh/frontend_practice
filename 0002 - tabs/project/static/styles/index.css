@@ -23,7 +23,7 @@ body {
   padding: 10px;
 }
 
-.section, header, #picture, article, ul {
+.section, header, #picture, article, nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -57,11 +57,12 @@ header h1, header p {
   padding: auto 10px;
   margin: 50px auto 0 auto;
   height: 400px;
+  width: 80%;
 }
 
 #section_content #picture, #section_content article {
   margin: auto;
-  width: 600px;
+  width: 100%;
   height: 100%;
 }
 
@@ -75,7 +76,7 @@ header h1, header p {
   background-color: var(--color_article_bg);
 }
 
-#section_content article ul {
+#section_content article nav {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -84,9 +85,11 @@ header h1, header p {
   padding: 0;
   margin: 0;
   background-color: var(--color_tab_deactive);
+  border-radius: 10px;
+  border: none;
 }
 
-#section_content article ul .tab {
+#section_content article nav .tab {
   list-style: none;
   width: 100%;
   height: 100%;
@@ -96,17 +99,13 @@ header h1, header p {
   cursor: pointer;
 }
 
-#section_content article ul .tab:hover {
-  background-color: var(--color_tab_hover);
-}
-
-#section_content article ul .tab:first-child {
+#section_content article nav .tab:first-child {
   background-color: var(--color_article_bg);
   border-color: var(--color_tab_border);
   border-radius: 5px;
 }
 
-#section_content article ul .tab:last-child {
+#section_content article nav .tab:last-child {
   border-top-right-radius: 10px;
 }
 
