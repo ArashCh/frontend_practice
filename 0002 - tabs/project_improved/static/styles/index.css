@@ -35,7 +35,7 @@ header h1, header p {
 }
 
 .title {
-  color: var(--color_txt_titles);
+  color: #122536;
 }
 
 .container, picture, img {
@@ -44,10 +44,6 @@ header h1, header p {
 
 section {
   gap: 10px;
-  padding: auto 10px;
-  margin: 50px auto 0 auto;
-  height: 400px;
-  width: 80%;
 }
 
 section .container, section picture {
@@ -63,6 +59,11 @@ section picture img {
 }
 
 section .main_container {
+  gap: 10px;
+  padding: auto 10px;
+  margin: 50px auto 0 auto;
+  height: 400px;
+  width: 80%;
   background-color: #ffffff;
 }
 
@@ -74,7 +75,7 @@ section .main_container .tabs {
   width: 100%;
   padding: 0;
   margin: 0;
-  background-color: var(--color_tab_deactive);
+  background-color: #d9e3ed;
   border-radius: 10px;
   border: none;
 }
@@ -84,22 +85,34 @@ section .main_container .tabs .tab {
   width: 100%;
   height: 100%;
   text-align: center;
-  border: solid 2px var(--color_tab_deactive);
-  background-color: var(--color_tab_deactive);
+  border: solid 2px #d9e3ed;
+  background-color: #d9e3ed;
   cursor: pointer;
-}
-
-section .main_container .tabs .tab:first-child {
-  background-color: var(--color_article_bg);
-  border-color: var(--color_tab_border);
-  border-radius: 5px;
 }
 
 section .main_container .tabs .tab:last-child {
   border-top-right-radius: 10px;
 }
 
+section .main_container .tabs .active {
+  background-color: #ffffff;
+  border-color: #4e6d9c;
+  border-radius: 5px;
+}
+
+section .main_container .tabs .deactive {
+  background-color: #d9e3ed;
+}
+
+section .main_container .tabs .deactive:hover {
+  background-color: #4e9c8b;
+}
+
 section .main_container .content {
   padding: 20px;
+}
+
+section .main_container .content p {
+  margin-top: 0;
 }
 /*# sourceMappingURL=index.css.map */
