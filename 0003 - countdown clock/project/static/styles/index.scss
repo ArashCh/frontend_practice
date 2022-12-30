@@ -1,0 +1,71 @@
+$colorBg: #f1f5f8;
+$colorTitle: #2e5b7c;
+$colorSubTitle: #27333f;
+$colorText: #8d949a;
+$colorUnitContainer: #0b2a3f;
+$colorClockValue: #ffffff;
+$colorClockUnit: #bebebe;
+body {
+    background-color: $colorBg;
+}
+section, .container, .countdown, .unit_container {
+    display: flex;
+}
+.container, .unit_container {
+    flex-direction: column;
+}
+p {
+    padding: 0;
+}
+section {
+    width: 93%;
+    margin: 70px 3.5% 0 3.5%;
+    column-gap: 3.5%;
+    justify-content: center;
+    picture, .container {
+        width: 700px;
+    }
+    picture {
+        img {
+            width: 100%;
+            border-radius: 2px;
+        }
+    }
+    .container {
+        p, .countdown, h1 {
+            margin: 35px 0 0 0;
+        }
+        h1 {
+            color: $colorTitle;
+            font-size: 32px;
+        }
+        h2 {
+            color: $colorSubTitle;
+            margin: 10px 0 0 0;
+        }
+        .countdown {
+            justify-content: space-between;
+            width: 60%;
+            .unit_container {
+                background-color: $colorUnitContainer;
+                width: 70px;
+                height: 70px;
+                p {
+                    margin: auto;
+                    text-align: center;
+                    font-weight: bold;
+                    padding: 0;
+                }
+                .digit {
+                    color: $colorClockValue;
+                    font-size: 26px;
+                    margin-bottom: 0;
+                }
+                .unit {
+                    color: $colorClockUnit;
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
