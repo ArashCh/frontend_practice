@@ -42,14 +42,15 @@ section {
         h2 {
             color: $colorSubTitle;
             margin: 10px 0 0 0;
+            font-size: 20px;
         }
         .countdown {
             justify-content: space-between;
             width: 60%;
             .unit_container {
                 background-color: $colorUnitContainer;
-                width: 70px;
-                height: 70px;
+                width: 85px;
+                height: 85px;
                 p {
                     margin: auto;
                     text-align: center;

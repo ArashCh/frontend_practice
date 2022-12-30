@@ -50,6 +50,7 @@ section .container h1 {
 section .container h2 {
   color: #27333f;
   margin: 10px 0 0 0;
+  font-size: 20px;
 }
 
 section .container .countdown {
@@ -61,8 +62,8 @@ section .container .countdown {
 
 section .container .countdown .unit_container {
   background-color: #0b2a3f;
-  width: 70px;
-  height: 70px;
+  width: 85px;
+  height: 85px;
 }
 
 section .container .countdown .unit_container p {
