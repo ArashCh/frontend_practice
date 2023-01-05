@@ -38,7 +38,7 @@ body {
   margin: 0;
 }
 
-header, nav, .form_search, .loading_bars {
+header, .wrapper, nav, .form_search, .loading_bars {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -56,33 +56,37 @@ nav, .form_search, .loading_bars {
 }
 
 header {
-  background-color: #ffffff;
+  width: 100%;
+  height: 78px;
   -webkit-box-shadow: 1.5px 6px 3px 0 #222222a9;
           box-shadow: 1.5px 6px 3px 0 #222222a9;
-  padding-left: 11.5%;
-  padding-right: 11.5%;
+  background-color: #ffffff;
+}
+
+header .wrapper {
+  width: 1170px;
+  margin: auto;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 78px;
 }
 
-header a, header nav {
+header .wrapper a, header .wrapper nav {
   margin: auto 0;
 }
 
-header img {
+header .wrapper img {
   width: 192px;
   margin-top: 3px;
 }
 
-header nav {
+header .wrapper nav {
   width: 179px;
   -webkit-column-gap: 24px;
           column-gap: 24px;
 }
 
-header nav a {
+header .wrapper nav a {
   font-size: 19px;
   text-align: center;
   letter-spacing: 2px;
@@ -164,12 +168,15 @@ h1, .no_data {
 }
 
 .cocktails {
-  margin: 58px 10.5%;
+  margin: 58px auto;
+  width: 1185px;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: auto;
   -ms-grid-columns: auto auto auto;
       grid-template: auto / auto auto auto;
+  -webkit-column-gap: 1em;
+          column-gap: 1em;
   row-gap: 63px;
 }
 
@@ -235,5 +242,38 @@ h1, .no_data {
 .cocktails .cocktail:hover {
   -webkit-box-shadow: 5px 10px 3px 0 #00000060;
           box-shadow: 5px 10px 3px 0 #00000060;
+}
+
+@media only screen and (max-width: 1370px) {
+  header .wrapper {
+    width: 85%;
+  }
+  .cocktails {
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 1271px) {
+  .cocktails {
+    -ms-grid-rows: auto;
+    -ms-grid-columns: auto auto;
+        grid-template: auto / auto auto;
+    -webkit-column-gap: 1.5em;
+            column-gap: 1.5em;
+  }
+  .cocktails .cocktail {
+    width: 98%;
+  }
+}
+
+@media only screen and (max-width: 835px) {
+  .cocktails {
+    -ms-grid-rows: auto;
+    -ms-grid-columns: auto;
+        grid-template: auto / auto;
+  }
+  .cocktails .cocktail {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=index.css.map */

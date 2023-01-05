@@ -35,7 +35,7 @@ body {
     padding: 0;
     margin: 0;
 }
-header, nav, .form_search, .loading_bars {
+header, .wrapper, nav, .form_search, .loading_bars {
     display: flex;
 }
 nav, .form_search, .loading_bars {
@@ -45,26 +45,29 @@ nav, .form_search, .loading_bars {
     box-shadow: $ShadowLight;
 }
 header {
-    background-color: $colorWhite;
-    box-shadow: $ShadowMid;
-    padding-left: 11.5%;
-    padding-right: 11.5%;
-    justify-content: space-between;
+    width: 100%;
     height: 78px;
-    a, nav {
-        margin: auto 0;
-    }
-    img {
-        width: 192px;
-        margin-top: 3px;
-    }
-    nav {
-        width: 179px;
-        column-gap: 24px;
-        a {
-            font-size: 19px;
-            text-align: center;
-            letter-spacing: 2px;
+    box-shadow: $ShadowMid;
+    background-color: $colorWhite;
+    .wrapper {
+        width: 1170px;
+        margin: auto;
+        justify-content: space-between;
+        a, nav {
+            margin: auto 0;
+        }
+        img {
+            width: 192px;
+            margin-top: 3px;
+        }
+        nav {
+            width: 179px;
+            column-gap: 24px;
+            a {
+                font-size: 19px;
+                text-align: center;
+                letter-spacing: 2px;
+            }
         }
     }
 }
@@ -130,9 +133,11 @@ h1, .no_data {
 }
 
 .cocktails {
-    margin: 58px 10.5%;
+    margin: 58px auto;
+    width: 1185px;
     display: grid;
     grid-template: auto / auto auto auto;
+    column-gap: 1em;
     row-gap: 63px;
     .cocktail {
         background-color: $colorWhite;
@@ -187,5 +192,32 @@ h1, .no_data {
     }
     .cocktail:hover {
         box-shadow: 5px 10px 3px 0 #00000060;
+    }
+}
+@media only screen and (max-width: 1370px) {
+    header {
+        .wrapper {
+            width: 85%;
+        }
+    }
+    .cocktails {
+        width: 85%;
+    }
+}
+@media only screen and (max-width: 1271px) {
+    .cocktails {
+        grid-template: auto / auto auto;
+        column-gap: 1.5em;
+        .cocktail {
+            width: 98%;
+        }
+    }
+}
+@media only screen and (max-width: 835px) {
+    .cocktails {
+        grid-template: auto / auto;
+        .cocktail {
+            width: 100%;
+        }
     }
 }
