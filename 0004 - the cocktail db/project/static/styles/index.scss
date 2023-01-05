@@ -1,0 +1,191 @@
+$colorBG: #f1f5f8;
+$colorTxt: #222222;
+$colorWhite: #ffffff;
+$colorGreen: #476a2e;
+$colorGreenLight: #d4e6a5;
+$colorGrey: #afafaf;
+$ShadowLight: 1.5px 5px 3px 0 #00000080;
+$ShadowMid: 1.5px 6px 3px 0 #222222a9;
+@-webkit-keyframes sk-stretchdelay {
+    0%, 40%, 100% { -webkit-transform: scaleY(0.0) }  
+    20% { -webkit-transform: scaleY(1.0) }
+}
+@keyframes sk-stretchdelay {
+    0%, 40%, 100% { 
+      transform: scaleY(0.0);
+      -webkit-transform: scaleY(0.0);
+    }  20% { 
+      transform: scaleY(1.0);
+      -webkit-transform: scaleY(1.0);
+    }
+  }
+
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    color: $colorTxt;
+    transition-duration: 0.3s;
+}
+*:visited {
+    text-decoration: none;
+}
+body {
+    background-color: $colorBG;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+    padding: 0;
+    margin: 0;
+}
+header, nav, .form_search, .loading_bars {
+    display: flex;
+}
+nav, .form_search, .loading_bars {
+    justify-content: center;
+}
+.form_search, .cocktail {
+    box-shadow: $ShadowLight;
+}
+header {
+    background-color: $colorWhite;
+    box-shadow: $ShadowMid;
+    padding-left: 11.5%;
+    padding-right: 11.5%;
+    justify-content: space-between;
+    height: 78px;
+    a, nav {
+        margin: auto 0;
+    }
+    img {
+        width: 192px;
+        margin-top: 3px;
+    }
+    nav {
+        width: 179px;
+        column-gap: 24px;
+        a {
+            font-size: 19px;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+    }
+}
+.form_search {
+    background-color: $colorWhite;
+    width: 640px;
+    height: 145px;
+    margin: 98px auto 97px auto;
+    flex-direction: column;
+    * {
+        margin: 0 auto;
+        width: 560px;
+    }
+    label {
+        color: $colorGreen;
+        font-weight: 700;
+        letter-spacing: 4px;
+        margin-bottom: 20px;
+    }
+    input {
+        border: none;
+        background-color: $colorBG;
+        border-radius: 5px;
+        height: 40px;
+        padding: 16px 8px;
+        font-size: 18px;
+        font-weight: 500;
+    }
+}
+h1, .no_data {
+    font-size: 31.5px;
+    font-weight: bolder;
+    letter-spacing: 5px;
+    margin: 0 auto;
+    text-align: center;
+
+}
+.loading_bars {
+    margin: 100px auto;
+    height: 100px;
+    width: 200px;
+    justify-content: space-between;
+    * {
+        background-color: $colorGreen;
+        height: 100%;
+        width: 50px;
+        -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+        animation: sk-stretchdelay 1.2s infinite ease-in-out;
+        transform-origin: bottom center;
+    }
+    .loading_bar_1 {
+        -webkit-animation-delay: -1.2s;
+        animation-delay: -1.2s;
+    }
+    .loading_bar_2 {
+        -webkit-animation-delay: -1.1s;
+        animation-delay: -1.1s;
+    }
+    .loading_bar_3 {
+        -webkit-animation-delay: -1.0s;
+        animation-delay: -1.0s;
+    }
+}
+
+.cocktails {
+    margin: 58px 10.5%;
+    display: grid;
+    grid-template: auto / auto auto auto;
+    row-gap: 63px;
+    .cocktail {
+        background-color: $colorWhite;
+        width: 368px;
+        height: 505px;
+        margin: 0 auto;
+        border-radius: 4px;
+        picture {
+            img {
+                width: 100%;
+                height: 320px;
+                object-fit: cover !important;
+                border-top-left-radius: 4px;
+                border-top-right-radius: 4px;
+            }
+        }
+        .content {
+            padding: 15px 0 0 23.5px;
+            * {
+                margin: 6px 0;
+            }
+            h2 {
+                font-size: 32px;
+                letter-spacing: 5px;
+            }
+            h3 {
+                font-weight: 600;
+                letter-spacing: 4px;
+                font-size: 18px;
+            }
+            p {
+                color: $colorGrey;
+                margin-bottom: 12px;
+                font-size: 14px;
+            }
+            a {
+                background-color: $colorGreen;
+                cursor: pointer;
+                font-size: 12px;
+                text-align: center;
+                padding: 7px 8px;
+                color: $colorWhite;
+                font-weight: 200;
+                letter-spacing: 5px;
+                border-radius: 5px;
+            }
+            a:hover {
+                background-color: $colorGreenLight;
+                color: $colorGrey;
+            }
+        }
+    }
+    .cocktail:hover {
+        box-shadow: 5px 10px 3px 0 #00000060;
+    }
+}
