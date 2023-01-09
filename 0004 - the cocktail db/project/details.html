@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robot" content="noindex,nofollow">
     <link rel="stylesheet" href="./static/styles/base.css">
-    <link rel="stylesheet" href="./static/styles/index.css">
-    <title>The Cocktail DB</title>
+    <link rel="stylesheet" href="./static/styles/details.css">
+    <title>Cocktails Complete</title>
 </head>
 <body>
     <header>
@@ -22,22 +23,27 @@
             </nav>
         </div>
     </header>
-    <section id="section">
-        <form class="form_search" id="formSearch">
-            <label for="search">Search Your Favorite Cocktail</label>
-            <input type="text" id="search">
-        </form>
+    <section>
+        <button>BACK HOME</button>
         <div class="loading_bars" id="loadingBars">
             <div class="loading_bar_1"></div>
             <div class="loading_bar_2"></div>
             <div class="loading_bar_3"></div>
         </div>
-        <h1>Cocktails</h1>
-        <p class="no_data" id="noData">No Cocktails Matched Your Search Criteria</p>
-        <div class="cocktails" id="cocktails">
+        <h1></h1>
+        <div class="container">
+            <picture>
+                <img id="img" src="" alt="">
+            </picture>
+            <div class="content">
+                <p>Name : &nbsp;<span id="name"></span></p>
+                <p>Category : &nbsp;<span id="category"></span></p>
+                <p>Info : &nbsp;<span id="info"></span></p>
+                <p>Glass : &nbsp;<span id="glass"></span></p>
+                <p>Instructions : &nbsp;<span id="instructions"></span></p>
+                <p>Ingredients : &nbsp;<span id="ingredients"></span></p>
+            </div>
         </div>
     </section>
-    <script src="static/js/library/jquery-3.6.3.min.js"></script>
-    <script src="static/js/index.js"></script>
 </body>
 </html>

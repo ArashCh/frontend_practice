@@ -58,6 +58,7 @@ function showDrinks(drinks) {
             let p = $("<p>");
             $(p).text(info);
             let a = $("<a>");
+            $(a).addClass("btn");
             $(a).text("DETAILS");
             // adding elements to the DOM
             $(content).append(h2);
