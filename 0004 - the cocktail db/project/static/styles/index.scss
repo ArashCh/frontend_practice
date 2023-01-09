@@ -67,6 +67,7 @@ header {
                 font-size: 19px;
                 text-align: center;
                 letter-spacing: 2px;
+                padding-bottom: 1px;
             }
         }
     }
@@ -78,8 +79,8 @@ header {
     margin: 98px auto 97px auto;
     flex-direction: column;
     * {
-        margin: 0 auto;
-        width: 560px;
+        margin: 0 40px;
+        // width: 87.5%;
     }
     label {
         color: $colorGreen;
@@ -219,5 +220,10 @@ h1, .no_data {
         .cocktail {
             width: 100%;
         }
+    }
+}
+@media only screen and (max-width: 753px) {
+    .form_search {
+        width: 85%;
     }
 }
