@@ -24,26 +24,40 @@
         </div>
     </header>
     <section>
-        <button>BACK HOME</button>
+        <a href="./index.html" class="btn">BACK HOME</a>
         <div class="loading_bars" id="loadingBars">
             <div class="loading_bar_1"></div>
             <div class="loading_bar_2"></div>
             <div class="loading_bar_3"></div>
         </div>
         <h1></h1>
-        <div class="container">
+        <div class="container" id="container">
             <picture>
                 <img id="img" src="" alt="">
             </picture>
             <div class="content">
-                <p>Name : &nbsp;<span id="name"></span></p>
-                <p>Category : &nbsp;<span id="category"></span></p>
-                <p>Info : &nbsp;<span id="info"></span></p>
-                <p>Glass : &nbsp;<span id="glass"></span></p>
-                <p>Instructions : &nbsp;<span id="instructions"></span></p>
-                <p>Ingredients : &nbsp;<span id="ingredients"></span></p>
+                <div class="item">
+                    <span class="label">Name :&nbsp;</span><span class="detail_content" id="name"></span>
+                </div>
+                <div class="item">
+                    <span class="label">Category :&nbsp;</span><span class="detail_content" id="category"></span>
+                </div>
+                <div class="item">
+                    <span class="label">Info :&nbsp;</span><span class="detail_content" id="info"></span>
+                </div>
+                <div class="item">
+                    <span class="label">Glass :&nbsp;</span><span class="detail_content" id="glass"></span>
+                </div>
+                <div class="item">
+                    <span class="label">Instructions :&nbsp;</span><span class="detail_content" id="instructions"></span>
+                </div>
+                <div class="item">
+                    <span class="label">Ingredients :&nbsp;</span><span class="detail_content" id="ingredients"></span>
+                </div>
             </div>
         </div>
     </section>
+    <script src="static/js/library/jquery-3.6.3.min.js"></script>
+    <script src="./static/js/details.js"></script>
 </body>
 </html>

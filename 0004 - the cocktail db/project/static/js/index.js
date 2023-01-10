@@ -26,6 +26,7 @@ function showDrinks(drinks) {
       for (let k of Object.keys(drinks)) {
             let drink = drinks[k]
             // get data
+            let id = drink["idDrink"];
             let img_src = drink["strDrinkThumb"];
             let name = drink["strDrink"];
             let info = drink["strAlcoholic"];
@@ -37,6 +38,9 @@ function showDrinks(drinks) {
                         ingredients.push(ing);
                   } else {
                         break;
+                  }
+                  if (i == 1) {
+                        console.log(drink);
                   }
             }
             // create and fill the DOMs
@@ -60,6 +64,7 @@ function showDrinks(drinks) {
             let a = $("<a>");
             $(a).addClass("btn");
             $(a).text("DETAILS");
+            $(a).attr("href", "details.html?"+id);
             // adding elements to the DOM
             $(content).append(h2);
             $(content).append(h3);
