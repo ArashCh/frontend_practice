@@ -1,9 +1,6 @@
 loadingBars(true);
-
 var cocktail_data;
-
 let id = window.location.search.slice(1);
-
 loadData(id)
 
 function loadData(id) {

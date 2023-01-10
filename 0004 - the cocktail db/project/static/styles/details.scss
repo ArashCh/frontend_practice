@@ -10,10 +10,14 @@ body {
 h1 {
     margin: 17px auto;
 }
-section {
+section, .container, .content {
     display: flex;
-    flex-direction: column;
     justify-content: center;
+}
+section, .content {
+    flex-direction: column;
+}
+section {
     .btn {
         margin: 0 auto;
         text-align: center;
@@ -25,8 +29,6 @@ section {
     .container {
         width: 1170px;
         margin: 41px auto;
-        display: flex;
-        justify-content: center;
         gap: 48px;
         picture {
             width: 43.2%;
@@ -38,8 +40,6 @@ section {
         .content {
             padding-top: 63px;
             width: 65%;
-            display: flex;
-            flex-direction: column;
             .item {
                 margin-bottom: 19px;
                 span {
@@ -78,12 +78,11 @@ section {
         .container {
             flex-direction: column;
             gap: 0;
-            picture {
+            picture, .content {
                 width: 100%;
             }
             .content {
                 padding-top: 30px;
-                width: 100%;
             }
         }
     }

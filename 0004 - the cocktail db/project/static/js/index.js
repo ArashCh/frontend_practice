@@ -1,7 +1,5 @@
 loadingBars(true);
-
 var cocktail_data;
-
 loadData()
 
 function loadData(search="") {
@@ -16,7 +14,6 @@ function loadData(search="") {
             }
       });
 }
-
 function showDrinks(drinks) {
       let cocktails = $("#cocktails");
       // clear current content
@@ -77,11 +74,6 @@ function showDrinks(drinks) {
       }
       loadingBars(false);
 }
-
-$("#search").keyup((event) => {
-      loadData(search=event.target.value);
-});
-
 function loadingBars(show=true) {
       $("#noData").hide();
       if (show) {
@@ -94,9 +86,11 @@ function loadingBars(show=true) {
             $("#cocktails").show();
       }
 }
-
 function noMatches() {
       $("#cocktails").hide();
       $("#noData").show();
       $("h1").hide();
 }
+$("#search").keyup((event) => {
+      loadData(search=event.target.value);
+});

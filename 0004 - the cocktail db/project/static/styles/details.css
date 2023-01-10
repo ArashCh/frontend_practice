@@ -9,17 +9,20 @@ h1 {
   margin: 17px auto;
 }
 
-section {
+section, .container, .content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section, .content {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 section .btn {
@@ -34,12 +37,6 @@ section .btn {
 section .container {
   width: 1170px;
   margin: 41px auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   gap: 48px;
 }
 
@@ -55,13 +52,6 @@ section .container picture img {
 section .container .content {
   padding-top: 63px;
   width: 65%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 section .container .content .item {
@@ -105,12 +95,11 @@ section .container .content .item .detail_content {
             flex-direction: column;
     gap: 0;
   }
-  section .container picture {
+  section .container picture, section .container .content {
     width: 100%;
   }
   section .container .content {
     padding-top: 30px;
-    width: 100%;
   }
 }
 /*# sourceMappingURL=details.css.map */
