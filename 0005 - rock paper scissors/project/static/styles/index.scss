@@ -1,0 +1,47 @@
+$colorHeader: #f6f9fa;
+$colorShadow: #363636;
+$colorBlue: #4285f4;
+$colorRed: #ea4335;
+$colorTxt: #073763;
+
+section, .form {
+    display: flex;
+}
+section {
+    width: 50%;
+    margin: 20vh auto;
+    .form {
+        margin: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 10px;
+        padding: 20px;
+        height: 200px;
+        width: 320px;
+        background-color: $colorHeader;
+        box-shadow: 0 0 20px 2px $colorShadow;
+        border-radius: 10px;
+        * {
+            margin: 0;
+        }
+        p , input {
+            font-size: 1.5rem;
+        }
+        p {
+            font-weight: 600;
+        }
+        input, .btn {
+            width: 90%;
+            border-radius: 5px;
+            border-color: $colorTxt;
+        }
+        .btn {
+            cursor: not-allowed;
+            color: $colorRed;
+            font-size: 1.1rem;
+            width: 70%;
+            margin-top: 10px;
+        }
+    }
+}

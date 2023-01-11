@@ -1,0 +1,73 @@
+$colorHeader: #f6f9fa;
+$colorHomeBG: #e09f2d;
+$colorBlue: #4285f4;
+$colorYellow: #fbbc04;
+$colorRed: #ea4335;
+$colorTxt: #073763;
+$colorShadow: #363636;
+@font-face {
+    font-family: Gaegu-Light;
+    src: url("../fonts/Gaegu-Light.ttf");
+}
+@font-face {
+    font-family: Gaegu-Regular;
+    src: url("../fonts/Gaegu-Regular.ttf");
+}
+@font-face {
+    font-family: Gaegu-Bold;
+    src: url("../fonts/Gaegu-Bold.ttf");
+}
+
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    color: $colorTxt;
+    font-family: Gaegu-Bold;
+    transition-duration: 0.2s;
+}
+*:visited {
+    text-decoration: none;
+}
+body {
+    background-color: $colorHomeBG;
+    padding: 0;
+    margin: 0;
+}
+header {
+    background-color: $colorHeader;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    align-items: center;
+    height: 60px;
+    padding: auto 20px;
+    box-shadow: 0 0 20px 2px $colorShadow;
+    * {
+        margin: auto;
+        text-align: center;
+    }
+    .logo {
+        margin-left: 50px;
+        font-size: 2rem;
+        font-weight: 900;
+        width: fit-content;
+        .logo-r {
+            color: $colorBlue;
+        }
+        .logo-p {
+            color: $colorYellow;
+        }
+        .logo-s {
+            color: $colorRed;
+        }
+    }
+    h1 {
+        -webkit-text-stroke: 1px;
+    }
+    nav {
+        display: flex;
+        gap: 20px;
+        a:hover {
+            color: $colorBlue;
+        }
+    }
+}

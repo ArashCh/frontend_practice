@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robot" content="noindex,nofollow">
+    <link rel="stylesheet" href="./static/styles/base.css">
+    <link rel="stylesheet" href="./static/styles/match.css">
+    <title>Match</title>
+</head>
+<body>
+    <header>
+        <a href="./index.html" class="logo">
+            <span class="logo-r">R</span>
+            <span class="logo-p">P</span>
+            <span class="logo-s">S</span>
+        </a>
+        <h1>Rock Paper Scissors</h1>
+        <nav>
+            <a href="./index.html">New</a>
+            <a href="">Rematch</a>
+        </nav>
+    </header>
+    <section>
+        <div class="score_board">
+            <p>Score Board</p>
+            <p class="scores">
+                <span id="playerScore">Player 0</span><span>&nbsp;:&nbsp;</span><span id="cpuScore">CPU 0</span>
+            </p>
+        </div>
+        <button class="rock" id="choiceRock"></button>
+        <button class="paper" id="choicePaper"></button>
+        <button class="scissor" id="choiceScissor"></button>
+        <p class="hands">
+            <span id="playerHand">Player</span><span>&nbsp;&nbsp;vs.&nbsp;&nbsp;</span><span id="cpuHand">CPU</span>
+        </p>
+        <p class="result" id="result"></p>
+    </section>
+    <script src="./static/js/library/jquery-3.6.3.min.js"></script>
+    <script src="./static/js/match.js"></script>
+</body>
+</html>

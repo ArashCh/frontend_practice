@@ -1,0 +1,91 @@
+@font-face {
+  font-family: Gaegu-Light;
+  src: url("../fonts/Gaegu-Light.ttf");
+}
+
+@font-face {
+  font-family: Gaegu-Regular;
+  src: url("../fonts/Gaegu-Regular.ttf");
+}
+
+@font-face {
+  font-family: Gaegu-Bold;
+  src: url("../fonts/Gaegu-Bold.ttf");
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  color: #073763;
+  font-family: Gaegu-Bold;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+
+*:visited {
+  text-decoration: none;
+}
+
+body {
+  background-color: #e09f2d;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  background-color: #f6f9fa;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 60px;
+  padding: auto 20px;
+  -webkit-box-shadow: 0 0 20px 2px #363636;
+          box-shadow: 0 0 20px 2px #363636;
+}
+
+header * {
+  margin: auto;
+  text-align: center;
+}
+
+header .logo {
+  margin-left: 50px;
+  font-size: 2rem;
+  font-weight: 900;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+header .logo .logo-r {
+  color: #4285f4;
+}
+
+header .logo .logo-p {
+  color: #fbbc04;
+}
+
+header .logo .logo-s {
+  color: #ea4335;
+}
+
+header h1 {
+  -webkit-text-stroke: 1px;
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+
+header nav a:hover {
+  color: #4285f4;
+}
+/*# sourceMappingURL=base.css.map */

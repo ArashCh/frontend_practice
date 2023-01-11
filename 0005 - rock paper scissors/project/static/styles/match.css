@@ -1,0 +1,127 @@
+body {
+  background-color: #ffbea8;
+}
+
+img {
+  width: 100px;
+}
+
+.shadow {
+  width: 100px;
+  fill: #363636;
+}
+
+section {
+  width: 70%;
+  margin: 10vh auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 30px;
+}
+
+section .score_board, section button {
+  margin: auto;
+}
+
+section .score_board {
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 2;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #f6f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  height: 80px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 0 0 20px 2px #363636;
+          box-shadow: 0 0 20px 2px #363636;
+}
+
+section .score_board * {
+  margin: auto;
+}
+
+section .score_board p {
+  font-size: 1.1rem;
+}
+
+section .score_board p:first-child {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+section .score_board .scores {
+  margin-top: 10px;
+}
+
+section button {
+  font-size: 2rem;
+  width: 120px;
+  height: 120px;
+  padding: 0;
+  border: solid;
+  border-radius: 100%;
+  border-width: 4px;
+}
+
+section .rock {
+  border-color: #4285f4;
+  background: url("../media/rock.png");
+}
+
+section .paper {
+  border-color: #fbbc04;
+  background: url("../media/paper.png");
+}
+
+section .scissor {
+  border-color: #ea4335;
+  background: url("../media/scissor.png");
+}
+
+section .rock, section .paper, section .scissor {
+  background-position: center;
+  background-size: 65%;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: 0 0 15px 0px #363636;
+          box-shadow: 0 0 15px 0px #363636;
+  cursor: pointer;
+}
+
+section button:hover {
+  -webkit-box-shadow: 0 10px 15px 5px #363636;
+          box-shadow: 0 10px 15px 5px #363636;
+}
+
+section .hands, section .result {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 4;
+  margin: 0 auto;
+  font-size: 1.5rem;
+}
+
+section .hands {
+  margin-top: 50px;
+}
+
+section .result {
+  -webkit-text-stroke: 1px;
+}
+/*# sourceMappingURL=match.css.map */
