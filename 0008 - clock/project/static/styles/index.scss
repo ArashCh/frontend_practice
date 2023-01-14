@@ -1,0 +1,21 @@
+$colorBlack: #000000;
+$colorBlue: #1cd3fe;
+
+* {
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+body {
+    margin: 0;
+    background-color: $colorBlack;
+}
+section {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    h1 {
+        font-size: 3.5rem;
+        text-align: center;
+        color: $colorBlue;
+    }
+}
