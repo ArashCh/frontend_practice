@@ -11,10 +11,11 @@ $(window).scroll(() => {
     } else {
         $("header").css("opacity", "1");
         if (window.scrollY > $("#pageOne").height()) {
-            $("header").css("background-color", "black");
+            $("header").css("box-shadow", "inset 0 100px 0 0 black");
         } else {
             console.log(window.scrollY);
             $("header").css("background-color", "");
+            $("header").css("box-shadow", "inset 0 0 0 0 black");
         }
     }
     lastScrollPos = window.scrollY;
