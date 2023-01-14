@@ -196,4 +196,46 @@ section .page .container .btn_container a {
   text-align: center;
   font-size: 13px;
 }
+
+footer {
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer nav {
+  width: 52%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 25px;
+}
+
+footer nav * {
+  font-size: 11.6px;
+}
+
+footer nav p {
+  font-family: D-DIN-Medium;
+  color: #ffffff66;
+}
+
+footer nav a {
+  font-family: D-DIN-Medium;
+  font-weight: 600;
+}
 /*# sourceMappingURL=index.css.map */
