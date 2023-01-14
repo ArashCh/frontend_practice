@@ -1,0 +1,190 @@
+// @font-face{
+//     font-family:D-DIN-Medium;
+//     // src:url(fonts/D-DIN.woff2)
+//     src:url("../fonts/D-DIN.otf")
+//     format("woff2"),url(fonts/D-DIN.woff)
+//     format("woff"),url(fonts/D-DIN.otf)
+//     format("opentype");
+//     font-style:normal;
+//     font-weight:400;
+//     font-display:block
+// }
+// @font-face{
+//     font-family:D-DIN-Light;
+//     src:url(fonts/D-DIN.woff2)
+//     format("woff2"),url(fonts/D-DIN.woff)
+//     format("woff"),url(fonts/D-DIN.otf)
+//     format("opentype");
+//     font-style:normal;
+//     font-weight:400;
+//     font-display:block
+// }
+// @font-face{
+//     font-family:D-DIN-Bold;
+//     src:url(fonts/D-DIN-Bold.woff2)
+//     format("woff2"),url(fonts/D-DIN-Bold.woff)
+//     format("woff"),url(fonts/D-DIN-Bold.otf)
+//     format("opentype");
+//     font-style:normal;
+//     font-weight:400;
+//     font-display:block
+// }
+// @font-face{
+//     font-family:D-DIN-Regular;
+//     src:url(fonts/D-DIN.woff2)
+//     format("woff2"),url(fonts/D-DIN.woff)
+//     format("woff"),url(fonts/D-DIN.otf)
+//     format("opentype");
+//     font-style:normal;
+//     font-weight:400;
+//     font-display:block
+// }
+
+@font-face {
+    font-family: D-DIN-Medium;
+    src: url("../fonts/D-DIN.otf");
+}
+@font-face {
+    font-family: D-DIN-Bold;
+    src: url("../fonts/D-DIN-Bold.otf");
+}
+@font-face {
+    font-family: D-DIN-Italic;
+    src: url("../fonts/D-DIN-Italic.otf");
+}
+@font-face {
+    font-family: D-DIN-Condensed;
+    src: url("../fonts/D-DINCondensed.otf");
+    font-weight:400;
+}
+@font-face {
+    font-family: D-DIN-Condensed-Bold;
+    src: url("../fonts/D-DINCondensed-Bold.otf");
+}
+@font-face {
+    font-family: D-DIN-XP;
+    src: url("../fonts/D-DINExp.otf");
+}
+@font-face {
+    font-family: D-DIN-XP-Bold;
+    src: url("../fonts/D-DINExp-Bold.otf");
+}
+
+$LeftSideLarge: 110px;
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    color: white;
+    font-family: D-DIN-XP-Bold;
+}
+*:visited {
+    text-decoration: none;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    overflow-x: hidden;
+}
+header {
+    position: fixed;
+    width: 100vw;
+    height: 61px;
+    display: flex;
+    padding-left: $LeftSideLarge;
+    .logo_container, .nav_container, .more_container {
+        margin-top: auto;
+    }
+    .logo_container {
+        width: 210px;
+        svg {
+            fill: white;
+        }
+    }
+    .nav_container {
+        width: 810px;
+        margin-left: 3%;
+        nav {
+            display: flex;
+            column-gap: 28px;
+            a {
+                font-size: .8rem;
+            }
+        }
+    }
+}
+.menu_container {
+    position: absolute;
+}
+section {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    .background {
+        margin-top: 2px;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 400vh;
+        z-index: -1;
+        .one {
+            background-image: url("../media/Launch_Page_Starlink1_vertical_18_DESKTOP_209c4e50a1.jpg");
+        }
+        .two {
+            background-image: url("../media/DESKTOP_HOMEPAGE_091c26421c.jpg");
+        }
+        .three {
+            background-image: url("../media/Homepage_Desktop_5ebdeb0c6c.jpg");
+        }
+        .four {
+            background-image: url("../media/S20_Chopstick_Stack_Desktop_0c016b49ec.jpg");
+        }
+        .img {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 100vh;
+        }
+    }
+    .page {
+        height: 100vh;
+        width: 100vw;
+        padding: 0;
+        margin: 0;
+        margin-left: -5px;
+        position: relative;
+        .container {
+            position: absolute;
+            left: 115px;
+            bottom: 115px;
+            p {
+                font-family: D-DIN-Medium;
+                font-size: 1.25rem;
+            }
+            h2 {
+                margin: 0;
+                font-size: 2.77rem;
+                font-family: D-DIN-XP-Bold;
+                margin-top: -15px;
+                margin-bottom: 30px;
+                width: 480px;
+            }
+            .btn_container {
+                border: solid 2px white;
+                width: 164px;
+                height: 55px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                a {
+                    margin: auto;
+                    text-align: center;
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}

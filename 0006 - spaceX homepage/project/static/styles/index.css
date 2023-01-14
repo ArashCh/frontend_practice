@@ -1,0 +1,199 @@
+@font-face {
+  font-family: D-DIN-Medium;
+  src: url("../fonts/D-DIN.otf");
+}
+
+@font-face {
+  font-family: D-DIN-Bold;
+  src: url("../fonts/D-DIN-Bold.otf");
+}
+
+@font-face {
+  font-family: D-DIN-Italic;
+  src: url("../fonts/D-DIN-Italic.otf");
+}
+
+@font-face {
+  font-family: D-DIN-Condensed;
+  src: url("../fonts/D-DINCondensed.otf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: D-DIN-Condensed-Bold;
+  src: url("../fonts/D-DINCondensed-Bold.otf");
+}
+
+@font-face {
+  font-family: D-DIN-XP;
+  src: url("../fonts/D-DINExp.otf");
+}
+
+@font-face {
+  font-family: D-DIN-XP-Bold;
+  src: url("../fonts/D-DINExp-Bold.otf");
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  color: white;
+  font-family: D-DIN-XP-Bold;
+}
+
+*:visited {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  overflow-x: hidden;
+}
+
+header {
+  position: fixed;
+  width: 100vw;
+  height: 61px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 110px;
+}
+
+header .logo_container, header .nav_container, header .more_container {
+  margin-top: auto;
+}
+
+header .logo_container {
+  width: 210px;
+}
+
+header .logo_container svg {
+  fill: white;
+}
+
+header .nav_container {
+  width: 810px;
+  margin-left: 3%;
+}
+
+header .nav_container nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 28px;
+          column-gap: 28px;
+}
+
+header .nav_container nav a {
+  font-size: .8rem;
+}
+
+.menu_container {
+  position: absolute;
+}
+
+section {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section .background {
+  margin-top: 2px;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 400vh;
+  z-index: -1;
+}
+
+section .background .one {
+  background-image: url("../media/Launch_Page_Starlink1_vertical_18_DESKTOP_209c4e50a1.jpg");
+}
+
+section .background .two {
+  background-image: url("../media/DESKTOP_HOMEPAGE_091c26421c.jpg");
+}
+
+section .background .three {
+  background-image: url("../media/Homepage_Desktop_5ebdeb0c6c.jpg");
+}
+
+section .background .four {
+  background-image: url("../media/S20_Chopstick_Stack_Desktop_0c016b49ec.jpg");
+}
+
+section .background .img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+}
+
+section .page {
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  margin-left: -5px;
+  position: relative;
+}
+
+section .page .container {
+  position: absolute;
+  left: 115px;
+  bottom: 115px;
+}
+
+section .page .container p {
+  font-family: D-DIN-Medium;
+  font-size: 1.25rem;
+}
+
+section .page .container h2 {
+  margin: 0;
+  font-size: 2.77rem;
+  font-family: D-DIN-XP-Bold;
+  margin-top: -15px;
+  margin-bottom: 30px;
+  width: 480px;
+}
+
+section .page .container .btn_container {
+  border: solid 2px white;
+  width: 164px;
+  height: 55px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section .page .container .btn_container a {
+  margin: auto;
+  text-align: center;
+  font-size: 13px;
+}
+/*# sourceMappingURL=index.css.map */
