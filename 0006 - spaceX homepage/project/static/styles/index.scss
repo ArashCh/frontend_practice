@@ -34,10 +34,10 @@ $LeftSideLarge: 110px;
     text-decoration: none;
     color: white;
     font-family: D-DIN-XP-Bold;
-    transition-duration: 0.3s;
-    -webkit-transition: ease-out 0.3s;
-    -moz-transition: ease-out 0.3s;
-    transition: ease-out 0.3s;
+    // transition-duration: 0.3s;
+    -webkit-transition: ease-in-out 0.4s;
+    -moz-transition: ease-in-out 0.4s;
+    transition: ease-in-out 0.4s;
 }
 *:visited {
     text-decoration: none;
@@ -144,8 +144,8 @@ section {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                // transition-duration: 1s;
-                box-shadow: inset 0 0 0 0 #ffffff00;
+                cursor: pointer;
+                // box-shadow: outset 0 55 0 0 #ffffff;
                 a {
                     margin: auto;
                     text-align: center;
@@ -153,7 +153,7 @@ section {
                 }
             }
             .btn_container:hover {
-                box-shadow: inset 0 -55px 0 0 #ffffff;
+                box-shadow: inset 0 -55px #ffffff;
                 a {
                     color: black;
                 }
