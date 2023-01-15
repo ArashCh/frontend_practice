@@ -2,6 +2,7 @@ $colorGreyLight: #f9f9f9;
 $colorGreyMid: #dddddd;
 $colorGreyDark: #bdbdbd;
 $colorBlue: #4e8ffe;
+$colorGreyVeryDark: #444444;
 
 * {
     box-sizing: border-box;
@@ -10,43 +11,55 @@ body {
     margin: 0;
 }
 section {
-    display: flex;
-    justify-content: center;
-    align-content: center;
     * {
         border: solid 1px $colorGreyDark;
     }
-    div {
+    .calculator {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1.2fr 1fr 1fr 1fr 1fr 1fr;
         row-gap: 15px;
         column-gap: 10px;
         width: 450px;
         height: 500px;
         padding: 10px;
+        overflow-y: hidden;
         * {
             font-size: 1.5rem;
         }
-        input {
+        .screen {
             grid-column-start: 1;
             grid-column-end: 5;
-            color: black;
-            padding: 10px;
-        }
-        input:hover{
-            box-shadow: 0 0 10px 0 $colorGreyLight, 0 0 10px 0 $colorGreyDark;
+            display: flex;
+            flex-direction: column;
+            p, input {
+                margin: 0;
+                border: none;
+            }
+            p {
+                font-size: 1.1rem;
+                padding: 3px;
+                color: $colorGreyVeryDark;
+                height: 27px !important;
+            }
+            input {
+                color: black;
+                padding: 10px;
+            }
+            input:hover {
+                background-color: $colorGreyLight;
+            }
         }
         .btn {
             cursor: pointer;
             &--operator {
                 background-color: $colorGreyMid;
             }
-            &--num, &--clear {
+            &--num, &--clear, &--dot {
                 background-color: $colorGreyLight;
             }
             &--equal {

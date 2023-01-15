@@ -10,8 +10,11 @@
 </head>
 <body>
     <section>
-        <div>
-            <input type="text" id="input">
+        <div class="calculator">
+            <div class="screen">
+                <p id="screenTop"></p>
+                <input type="text" id="input">
+            </div>
             <button class="btn btn--operator" id="btnAdd">&plus;</button>
             <button class="btn btn--operator" id="btnSubtract">&minus;</button>
             <button class="btn btn--operator" id="btnMultiply">&times;</button>
@@ -27,7 +30,7 @@
             <button class="btn btn--num">2</button>
             <button class="btn btn--num">3</button>
             <button class="btn btn--num">0</button>
-            <button class="btn btn--dot btn--num">.</button>
+            <button class="btn btn--num" id="btnDot">.</button>
             <button class="btn btn--clear" id="btnClear">C</button>
         </div>
     </section>

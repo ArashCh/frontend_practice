@@ -7,22 +7,11 @@ body {
   margin: 0;
 }
 
-section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-}
-
 section * {
   border: solid 1px #bdbdbd;
 }
 
-section div {
+section .calculator {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -32,46 +21,68 @@ section div {
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr;
-  -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1.2fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1.2fr 1fr 1fr 1fr 1fr 1fr;
   row-gap: 15px;
   -webkit-column-gap: 10px;
           column-gap: 10px;
   width: 450px;
   height: 500px;
   padding: 10px;
+  overflow-y: hidden;
 }
 
-section div * {
+section .calculator * {
   font-size: 1.5rem;
 }
 
-section div input {
+section .calculator .screen {
   -ms-grid-column: 1;
       grid-column-start: 1;
   grid-column-end: 5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section .calculator .screen p, section .calculator .screen input {
+  margin: 0;
+  border: none;
+}
+
+section .calculator .screen p {
+  font-size: 1.1rem;
+  padding: 3px;
+  color: #444444;
+  height: 27px !important;
+}
+
+section .calculator .screen input {
   color: black;
   padding: 10px;
 }
 
-section div input:hover {
-  -webkit-box-shadow: 0 0 10px 0 #f9f9f9, 0 0 10px 0 #bdbdbd;
-          box-shadow: 0 0 10px 0 #f9f9f9, 0 0 10px 0 #bdbdbd;
-}
-
-section div .btn {
-  cursor: pointer;
-}
-
-section div .btn--operator {
-  background-color: #dddddd;
-}
-
-section div .btn--num, section div .btn--clear {
+section .calculator .screen input:hover {
   background-color: #f9f9f9;
 }
 
-section div .btn--equal {
+section .calculator .btn {
+  cursor: pointer;
+}
+
+section .calculator .btn--operator {
+  background-color: #dddddd;
+}
+
+section .calculator .btn--num, section .calculator .btn--clear, section .calculator .btn--dot {
+  background-color: #f9f9f9;
+}
+
+section .calculator .btn--equal {
   background-color: #4e8ffe;
   color: #f9f9f9;
   -ms-grid-row: 3;
@@ -81,7 +92,7 @@ section div .btn--equal {
       grid-column-start: 4;
 }
 
-section div .btn:hover {
+section .calculator .btn:hover {
   -webkit-box-shadow: inset 0 0 10px 0 #fff, 0 0 10px 0 #bdbdbd;
           box-shadow: inset 0 0 10px 0 #fff, 0 0 10px 0 #bdbdbd;
   z-index: 50;
