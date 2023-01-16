@@ -1,0 +1,74 @@
+$colorYellow: #e09a0f;
+
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background-color: $colorYellow;
+    display: flex;
+    justify-content: center;
+}
+section {
+    .piano {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        border: solid 5px black;
+        border-radius: 10px;
+        .key {
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            border: solid 2px black;
+            border-radius: 3px;
+            padding-bottom: 7px;
+            p {
+                text-align: center;
+                font-weight: 600;
+                font-size: .9rem;
+                margin: 0;
+                padding: 0;
+                pointer-events: none;
+            }
+            &--white {
+                width: 50px !important;
+                height: 150px !important;
+                background-color: white;
+            }
+            &--black {
+                position: absolute;
+                transform: translateX(-50%);
+                width: 30px !important;
+                height: 100px !important;
+                background-color: black;
+                p {
+                    color: white;
+                }
+            }
+        }
+        .key--black:nth-child(2) {
+            left: 50px;
+        }
+        .key--black:nth-child(4) {
+            left: 100px;
+        }
+        .key--black:nth-child(7) {
+            left: 200px;
+        }
+        .key--black:nth-child(9) {
+            left: 250px;
+        }
+        .key--black:nth-child(10) {
+            left: 300px;
+        }
+        .key--black:nth-child(11) {
+            left: 300px;
+        }
+        .pressed_key {
+            background-color: #40c0fb;
+        }
+    }
+}
