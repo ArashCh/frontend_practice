@@ -1,0 +1,59 @@
+$colorYellow: #ffb700;
+$colorRed: #f72b25;
+$colorWhite: #ffffff;
+$colorBlack: #000000;
+$colorBlue: #2560f7;
+$paddleWidth: 15px;
+$paddleHeight: 80px;
+$ballRadius: 20px;
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+section {
+    .board, .paddle, .ball {
+        position: absolute;
+    }
+    .board, .ball {
+        transform: translate(-50%, -50%);
+    }
+    .paddle, .ball {
+        border: solid 1px $colorBlack;
+        box-shadow: 3px 3px 2px 0 $colorBlack;
+    }
+    .board {
+        border: solid 5px $colorBlack;
+        background-color: $colorYellow;
+        width: 700px;
+        height: 500px;
+        padding: 0;
+        left: 50vw;
+        top: 50vh;
+        .paddle {
+            width: $paddleWidth;
+            height: $paddleHeight;
+            &--left {
+                background-color: $colorRed;
+                left: 0;
+                top: 210px;
+            }
+            &--right {
+                background-color: $colorBlue;
+                right: 0px;
+                top: 210px;
+            }
+        }
+        .ball {
+            left: 0px;
+            top: 0px;
+            background-color: $colorWhite;
+            width: $ballRadius;
+            height: $ballRadius;
+            border-radius: 50%;
+        }
+    }
+}

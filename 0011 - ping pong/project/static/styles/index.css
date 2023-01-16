@@ -1,0 +1,62 @@
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+section .board, section .paddle, section .ball {
+  position: absolute;
+}
+
+section .board, section .ball {
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+section .paddle, section .ball {
+  border: solid 1px #000000;
+  -webkit-box-shadow: 3px 3px 2px 0 #000000;
+          box-shadow: 3px 3px 2px 0 #000000;
+}
+
+section .board {
+  border: solid 5px #000000;
+  background-color: #ffb700;
+  width: 700px;
+  height: 500px;
+  padding: 0;
+  left: 50vw;
+  top: 50vh;
+}
+
+section .board .paddle {
+  width: 15px;
+  height: 80px;
+}
+
+section .board .paddle--left {
+  background-color: #f72b25;
+  left: 0;
+  top: 210px;
+}
+
+section .board .paddle--right {
+  background-color: #2560f7;
+  right: 0px;
+  top: 210px;
+}
+
+section .board .ball {
+  left: 0px;
+  top: 0px;
+  background-color: #ffffff;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+/*# sourceMappingURL=index.css.map */
