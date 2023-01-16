@@ -1,0 +1,72 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #e09a0f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section .piano {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: solid 5px black;
+  border-radius: 10px;
+}
+
+section .piano .key {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  border: solid 2px black;
+  border-radius: 3px;
+  padding-bottom: 7px;
+}
+
+section .piano .key p {
+  text-align: center;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+}
+
+section .piano .key--white {
+  width: 50px !important;
+  height: 150px !important;
+  background-color: white;
+}
+
+section .piano .key--black {
+  position: absolute;
+  left: 50px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 30px !important;
+  height: 100px !important;
+  background-color: black;
+}
+
+section .piano .key--black p {
+  color: white;
+}
+/*# sourceMappingURL=index.css.map */
