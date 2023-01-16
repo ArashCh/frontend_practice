@@ -36,7 +36,7 @@ section .board {
 
 section .board .paddle {
   width: 15px;
-  height: 80px;
+  height: 100px;
 }
 
 section .board .paddle--left {
