@@ -46,8 +46,10 @@ section .piano .key {
 section .piano .key p {
   text-align: center;
   font-weight: 600;
+  font-size: .9rem;
   margin: 0;
   padding: 0;
+  pointer-events: none;
 }
 
 section .piano .key--white {
@@ -58,7 +60,6 @@ section .piano .key--white {
 
 section .piano .key--black {
   position: absolute;
-  left: 50px;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   width: 30px !important;
@@ -68,5 +69,33 @@ section .piano .key--black {
 
 section .piano .key--black p {
   color: white;
+}
+
+section .piano .key--black:nth-child(2) {
+  left: 50px;
+}
+
+section .piano .key--black:nth-child(4) {
+  left: 100px;
+}
+
+section .piano .key--black:nth-child(7) {
+  left: 200px;
+}
+
+section .piano .key--black:nth-child(9) {
+  left: 250px;
+}
+
+section .piano .key--black:nth-child(10) {
+  left: 300px;
+}
+
+section .piano .key--black:nth-child(11) {
+  left: 300px;
+}
+
+section .piano .pressed_key {
+  background-color: #40c0fb;
 }
 /*# sourceMappingURL=index.css.map */

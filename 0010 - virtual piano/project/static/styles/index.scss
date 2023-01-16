@@ -28,8 +28,10 @@ section {
             p {
                 text-align: center;
                 font-weight: 600;
+                font-size: .9rem;
                 margin: 0;
                 padding: 0;
+                pointer-events: none;
             }
             &--white {
                 width: 50px !important;
@@ -38,7 +40,6 @@ section {
             }
             &--black {
                 position: absolute;
-                left: 50px;
                 transform: translateX(-50%);
                 width: 30px !important;
                 height: 100px !important;
@@ -47,6 +48,27 @@ section {
                     color: white;
                 }
             }
+        }
+        .key--black:nth-child(2) {
+            left: 50px;
+        }
+        .key--black:nth-child(4) {
+            left: 100px;
+        }
+        .key--black:nth-child(7) {
+            left: 200px;
+        }
+        .key--black:nth-child(9) {
+            left: 250px;
+        }
+        .key--black:nth-child(10) {
+            left: 300px;
+        }
+        .key--black:nth-child(11) {
+            left: 300px;
+        }
+        .pressed_key {
+            background-color: #40c0fb;
         }
     }
 }

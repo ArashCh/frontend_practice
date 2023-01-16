@@ -31,8 +31,10 @@ $(this).keydown((event)=>{
     lastKey = event.which;
     const key = KEYBOARD_MAP.get(String.fromCharCode(event.which));
     play(key);
+    $("#"+key).addClass("pressed_key");
 });
 
 $(this).keyup(() => {
     lastKey = "";
+    $(".key").removeClass("pressed_key");
 });
