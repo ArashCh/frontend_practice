@@ -9,6 +9,25 @@ body {
           box-sizing: border-box;
 }
 
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section h1, section .score_board {
+  margin: 10px auto;
+  text-align: center;
+}
+
+section .score_board {
+  font-size: 1.3rem;
+}
+
 section .board, section .paddle, section .ball {
   position: absolute;
 }
@@ -32,6 +51,7 @@ section .board {
   padding: 0;
   left: 50vw;
   top: 50vh;
+  cursor: none;
 }
 
 section .board .paddle {

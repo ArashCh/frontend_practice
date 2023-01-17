@@ -15,6 +15,15 @@ body {
     box-sizing: border-box;
 }
 section {
+    display: flex;
+    flex-direction: column;
+    h1, .score_board {
+        margin: 10px auto;
+        text-align: center;
+    }
+    .score_board {
+        font-size: 1.3rem;
+    }
     .board, .paddle, .ball {
         position: absolute;
     }
@@ -33,6 +42,7 @@ section {
         padding: 0;
         left: 50vw;
         top: 50vh;
+        cursor: none;
         .paddle {
             width: $paddleWidth;
             height: $paddleHeight;
