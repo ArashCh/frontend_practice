@@ -20,6 +20,11 @@ $(window).scroll(() => {
     }
     lastScrollPos = window.scrollY;
 });
+
+// document.getElementsByClassName("btn_container").addEventListener((event)=>{
+//     const btn = event.target;
+
+// });
 // $(".btn_container").mouseover( ()=>{
 //     $(".btn_container").css("box-shadow", "inset 0 -55px 0 0 #ffffff");
 // });
