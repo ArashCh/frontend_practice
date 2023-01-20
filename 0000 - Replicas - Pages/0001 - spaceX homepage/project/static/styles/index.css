@@ -203,26 +203,21 @@ section .page .container .btn_container {
   cursor: pointer;
 }
 
+section .page .container .btn_container .btn_bg {
+  position: absolute;
+  background-color: #fff;
+  top: 100%;
+  right: 0;
+  bottom: 1px;
+  left: 1px;
+  z-index: 0;
+}
+
 section .page .container .btn_container a {
   margin: auto;
   text-align: center;
   font-size: 13px;
-}
-
-section .page .container .btn_container::before {
-  content: "";
-  position: absolute;
-  top: 100%;
-  right: 0;
-  bottom: 1px;
-  left: 0.5px;
-  z-index: -1;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-
-section .page .container .btn_container:hover a {
-  color: black;
+  z-index: 1;
 }
 
 footer {

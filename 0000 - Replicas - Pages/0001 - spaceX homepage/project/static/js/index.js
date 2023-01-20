@@ -1,3 +1,4 @@
+const BTN_ANIMATION_DURATION = "200";
 let lastScrollPos = window.scrollY;
 
 $(window).scroll(() => {
@@ -21,10 +22,33 @@ $(window).scroll(() => {
     lastScrollPos = window.scrollY;
 });
 
-// document.getElementsByClassName("btn_container").addEventListener((event)=>{
-//     const btn = event.target;
 
-// });
+
+[...document.getElementsByClassName("btn_container")].forEach((element)=>{
+    element.addEventListener("mouseover", ()=>{
+        const btn_bg = element.getElementsByClassName("btn_bg")[0];
+        const a = element.getElementsByTagName("a")[0];
+        a.style.color = "black"
+        btn_bg.style.top = "1px";
+    });
+});
+[...document.getElementsByClassName("btn_container")].forEach((element)=>{
+    element.addEventListener("mouseleave", ()=>{
+        const btn_bg = element.getElementsByClassName("btn_bg")[0];
+        const a = element.getElementsByTagName("a")[0];
+        a.style.color = "white"
+        btn_bg.style.bottom = "100%";
+        // to reset
+        const interval = setInterval(()=>{
+            btn_bg.setAttribute("transition", "all 0s");
+            btn_bg.style.bottom = "1px";
+            btn_bg.style.top = "100%";
+            clearInterval(interval);
+        },400);
+    });
+});
+
+
 // $(".btn_container").mouseover( ()=>{
 //     $(".btn_container").css("box-shadow", "inset 0 -55px 0 0 #ffffff");
 // });
