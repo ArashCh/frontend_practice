@@ -53,34 +53,134 @@ header {
     position: fixed;
     width: 100vw;
     height: 100px;
-    display: flex;
     align-items: center;
     padding-left: $LeftSideLarge;
+    z-index: 2;
     .bg {
         height: 100%;
         width: 100%;
         background-color: red;
     }
     .logo_container {
+        position: absolute;
+        left: 110px;
+        top: 32px;
         width: 210px;
         svg {
             fill: white;
         }
     }
-    .nav_container {
-        width: 810px;
-        margin-left: 3%;
-        nav {
+    .navs {
+        position: absolute;
+        display: flex;
+        left: 356px;
+        top: 45px;
+        column-gap: 26px;
+        .nav_container {
             display: flex;
-            column-gap: 28px;
+            transform: scaleX(0.97);
+            cursor: pointer;
+            .nav_bottom_line {
+                position: absolute;
+                top: 99%;
+                right: 0;
+                bottom: 0;
+                left: 0;
+            }
             a {
                 font-size: .8rem;
+                font-weight: normal;
             }
         }
     }
+    .right_nav {
+        position: absolute;
+        right: 0;
+        top: 45px;
+        a {
+            position: absolute;
+            right: 113px;
+            font-size: .8rem;
+            font-weight: normal;
+        }
+    }
+}
+.hamburger_menu {
+    position: fixed;
+    right: 58px;
+    top: 47px;
+    height: 10px;
+    z-index: 2;
+    border: none;
+    background: none;
+    cursor: pointer;
+    .bar {
+        top: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        transition-duration: 0s;
+    }
+}
+.hamburger_menu, .hamburger_menu::before, .hamburger_menu::after {
+    transition-duration: 0.5s;
+}
+.hamburger_menu::before, .hamburger_menu::after, .hamburger_menu .bar {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 16px;
+    height: 2px;
+    background-color: #fff;
+}
+.hamburger_menu::before, .hamburger_menu::after {
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+.hamburger_menu::before {
+    top: 0;
+}
+.hamburger_menu::after {
+    bottom: 0;
+}
+.hamburger_menu.is-active::before {
+    transform: translate(-8px, 2px) rotate(45deg);
+}
+.hamburger_menu.is-active::after {
+    transform: translate(-8px, -6px) rotate(-45deg);
+}
+.hamburger_menu.is-active .bar{
+    opacity: 0;
 }
 .menu_container {
-    position: absolute;
+    position: fixed;
+    background-color: #000;
+    top: 0;
+    right: -350px;
+    bottom: 0;
+    width: 350px;
+    z-index: 2;
+    transition-delay: 0s;
+    transition-duration: .7s;
+    ul {
+        position: absolute;
+        top: 75px;
+        right: 50px;
+        margin: 0;
+        li {
+            list-style: none;
+            height: 32px;
+            width: 250px;
+            text-align: end;
+            align-items: baseline;
+            border-bottom: solid 0.4px #ffffff33;
+            margin-top: 10px;
+            a {
+                font-family: D-DIN;
+                font-weight: 600;
+            }
+            
+        }
+    }
 }
 section {
     padding: 0;
@@ -122,6 +222,42 @@ section {
         margin: 0;
         margin-left: -5px;
         position: relative;
+        .arrow {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 40px;
+            height: 30px;
+            width: 30px;
+            display: flex;
+            animation: arrow-anim 2.5s ease-in-out forwards infinite;
+            svg {
+                margin: auto;
+                fill: #fff;
+                width: 100%;
+                padding: 0;
+                margin: 0;
+            }
+        }
+        @keyframes arrow-anim {
+            0% {
+                opacity: 0;
+            }
+            25% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 1;
+            }
+            75% {
+                opacity: 1;
+                transform: translateX(-50%) translateY(20px);
+            }
+            100% {
+                opacity: 0;
+                transform: translateX(-50%) translateY(20px);
+            }
+        }
         .container {
             position: absolute;
             left: 115px;

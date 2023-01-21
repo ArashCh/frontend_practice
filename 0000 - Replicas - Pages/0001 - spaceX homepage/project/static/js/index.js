@@ -1,28 +1,27 @@
-const BTN_ANIMATION_DURATION = "200";
 let lastScrollPos = window.scrollY;
 
 $(window).scroll(() => {
     if (window.scrollY > lastScrollPos) {
         if (window.scrollY > $("header").height()) {
             $("header").css("opacity", "0");
+            $("#hamburgerMenu").css("opacity", "0");
         }
         else {
             $("header").css("opacity", "1");
+            $("#hamburgerMenu").css("opacity", "1");
         }
     } else {
         $("header").css("opacity", "1");
+        $("#hamburgerMenu").css("opacity", "1");
         if (window.scrollY > $("#pageOne").height()) {
             $("header").css("box-shadow", "inset 0 100px 0 0 black");
         } else {
-            console.log(window.scrollY);
             $("header").css("background-color", "");
             $("header").css("box-shadow", "inset 0 0 0 0 black");
         }
     }
     lastScrollPos = window.scrollY;
 });
-
-
 
 [...document.getElementsByClassName("btn_container")].forEach((element)=>{
     element.addEventListener("mouseover", ()=>{
@@ -47,11 +46,15 @@ $(window).scroll(() => {
         },400);
     });
 });
-
-
-// $(".btn_container").mouseover( ()=>{
-//     $(".btn_container").css("box-shadow", "inset 0 -55px 0 0 #ffffff");
-// });
-// $(".btn_container").mouseleave( ()=>{
-//     $(".btn_container").css("box-shadow", "inset 0 -55px 0 0 #ffffff00");
-// });
+document.getElementById("hamburgerMenu").addEventListener("click", (event)=>{
+    const hamMenu = event.target;
+    const menuContainer = document.getElementById("menuContainer");
+    if (hamMenu.className == "hamburger_menu") {
+        hamMenu.setAttribute("class", "hamburger_menu is-active");
+        menuContainer.style.right = "0px";
+    }
+    else if (hamMenu.className == "hamburger_menu is-active") {
+        hamMenu.setAttribute("class", "hamburger_menu");
+        menuContainer.style.right = "-350px";
+    }
+});
