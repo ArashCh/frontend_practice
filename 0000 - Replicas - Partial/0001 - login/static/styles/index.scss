@@ -1,13 +1,121 @@
 $colorBlueDark: #00274c;
 $colorBlueMid: #385277;
-$colorFormBG: #beb7cc;
+$colorPink: #d4948a;
+$colorBlue: #265396;
+$colorPurple: #ad7592;
+$colorFormBG: #beb7cce1;
+$colorBG: #97847e;
 
 * {
     box-sizing: border-box;
 }
 body {
     margin: 0;
-    background-color: #806c91;
+    overflow: hidden;
+}
+.bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background: linear-gradient($colorPurple, $colorPink, $colorBG 95%);
+    background-color: red;
+    .circle {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(50px);
+        width: 50px;
+        height: 50px;
+    }
+    .pink {
+        background-color: $colorPink;
+    }
+    .blue {
+        background-color: $colorBlue;
+    }
+    .purple {
+        background-color: $colorPurple;
+    }
+    .circle_1 {
+        left: 500px;
+        top: -100px;
+        width: 120px;
+        height: 120px;
+    }
+    .circle_2 {
+        right: 550px;
+        top: -120px;
+        width: 250px;
+        height: 250px;
+    }
+    .circle_3 {
+        right: 300px;
+        top: -220px;
+        width: 250px;
+        height: 250px;
+    }
+    .circle_4 {
+        left: 200px;
+        top: 0;
+        width: 300px;
+        height: 300px;
+    }
+    .circle_5 {
+        left: 600px;
+        top: 100px;
+        width: 50px;
+        height: 50px;
+    }
+    .circle_6 {
+        right: 600px;
+        top: 70px;
+        width: 200px;
+        height: 200px;
+    }
+    .circle_7 {
+        right: 450px;
+        top: 90px;
+        width: 100px;
+        height: 100px;
+    }
+    .circle_8 {
+        right: 100px;
+        top: 180px;
+        width: 400px;
+        height: 400px;
+    }
+    .circle_9 {
+        left: 450px;
+        top: 280px;
+        width: 100px;
+        height: 100px;
+    }
+    .circle_10 {
+        left: 750px;
+        top: 480px;
+        width: 200px;
+        height: 200px;
+    }
+    .circle_11 {
+        right: 350px;
+        top: 480px;
+        width: 200px;
+        height: 200px;
+    }
+    .circle_12 {
+        left: 500px;
+        top: 480px;
+        width: 200px;
+        height: 200px;
+    }
+    .circle_13 {
+        left: 200px;
+        top: 480px;
+        width: 200px;
+        height: 200px;
+    }
 }
 section {
     position: absolute;
@@ -30,22 +138,24 @@ section {
             stroke-width: 1px;
         }
     }
-    form {
+    form, form .fields, form .fields .field, form .form_extra {
         display: flex;
+    }
+    form, form .fields {
         flex-direction: column;
+    }
+    form .fields, form .form_extra {
+        justify-content: space-between;
+        height: 140px;
+    }
+    form {
         padding-top: 140px;
         height: 420px;
         background-color: $colorFormBG;
         border-radius: 40px;
         .fields {
-            height: 140px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
             padding: 0 50px;
             .field {
-                display: flex;
-                justify-content: start;
                 height: 60px;
                 width: 100%;
                 margin: 0 auto;
@@ -74,11 +184,7 @@ section {
             }
         }
         .form_extra {
-            display: flex;
-            justify-content: space-between;
             align-content: center;
-            height: 125px;
-            width: 100%;
             padding: 0 60px;
             * {
                 color: $colorBlueDark;
@@ -87,9 +193,11 @@ section {
             *:visited {
                 text-decoration: none;
             }
-            .left {
+            .left, .right {
                 display: flex;
                 justify-content: center;
+            }
+            .left {
                 * {
                     margin: auto 10px;
                 }
@@ -100,8 +208,6 @@ section {
                 }
             }
             .right {
-                display: flex;
-                justify-content: center;
                 * {
                     margin: auto 0;
                 }
@@ -113,10 +219,14 @@ section {
         left: 50px;
         right: 50px;
         height: 50px;
-        background: linear-gradient(#00000000, $colorFormBG 40%);
+        background: linear-gradient(#00000000, $colorFormBG 35%);
         border: none;
         border-radius: 0 0 40px 40px;
         color: #fff;
         font-weight: 600;
+        cursor: pointer;
+    }
+    input:hover {
+        color: $colorBlueDark;
     }
 }

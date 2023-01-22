@@ -5,7 +5,131 @@
 
 body {
   margin: 0;
-  background-color: #806c91;
+  overflow: hidden;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ad7592), color-stop(#d4948a), color-stop(95%, #97847e));
+  background: linear-gradient(#ad7592, #d4948a, #97847e 95%);
+  background-color: red;
+}
+
+.bg .circle {
+  position: absolute;
+  border-radius: 50%;
+  -webkit-filter: blur(50px);
+          filter: blur(50px);
+  width: 50px;
+  height: 50px;
+}
+
+.bg .pink {
+  background-color: #d4948a;
+}
+
+.bg .blue {
+  background-color: #265396;
+}
+
+.bg .purple {
+  background-color: #ad7592;
+}
+
+.bg .circle_1 {
+  left: 500px;
+  top: -100px;
+  width: 120px;
+  height: 120px;
+}
+
+.bg .circle_2 {
+  right: 550px;
+  top: -120px;
+  width: 250px;
+  height: 250px;
+}
+
+.bg .circle_3 {
+  right: 300px;
+  top: -220px;
+  width: 250px;
+  height: 250px;
+}
+
+.bg .circle_4 {
+  left: 200px;
+  top: 0;
+  width: 300px;
+  height: 300px;
+}
+
+.bg .circle_5 {
+  left: 600px;
+  top: 100px;
+  width: 50px;
+  height: 50px;
+}
+
+.bg .circle_6 {
+  right: 600px;
+  top: 70px;
+  width: 200px;
+  height: 200px;
+}
+
+.bg .circle_7 {
+  right: 450px;
+  top: 90px;
+  width: 100px;
+  height: 100px;
+}
+
+.bg .circle_8 {
+  right: 100px;
+  top: 180px;
+  width: 400px;
+  height: 400px;
+}
+
+.bg .circle_9 {
+  left: 450px;
+  top: 280px;
+  width: 100px;
+  height: 100px;
+}
+
+.bg .circle_10 {
+  left: 750px;
+  top: 480px;
+  width: 200px;
+  height: 200px;
+}
+
+.bg .circle_11 {
+  right: 350px;
+  top: 480px;
+  width: 200px;
+  height: 200px;
+}
+
+.bg .circle_12 {
+  left: 500px;
+  top: 480px;
+  width: 200px;
+  height: 200px;
+}
+
+.bg .circle_13 {
+  left: 200px;
+  top: 480px;
+  width: 200px;
+  height: 200px;
 }
 
 section {
@@ -37,42 +161,38 @@ section .profile_container svg {
   stroke-width: 1px;
 }
 
-section form {
+section form, section form .fields, section form .fields .field, section form .form_extra {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+section form, section form .fields {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+section form .fields, section form .form_extra {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 140px;
+}
+
+section form {
   padding-top: 140px;
   height: 420px;
-  background-color: #beb7cc;
+  background-color: #beb7cce1;
   border-radius: 40px;
 }
 
 section form .fields {
-  height: 140px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   padding: 0 50px;
 }
 
 section form .fields .field {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
   height: 60px;
   width: 100%;
   margin: 0 auto;
@@ -101,20 +221,12 @@ section form .fields .field input:not([type=submit]) {
 }
 
 section form .fields .field input:not([type=submit])::-webkit-input-placeholder {
-  color: #beb7cc;
+  color: #beb7cce1;
 }
 
 section form .form_extra {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -ms-flex-line-pack: center;
       align-content: center;
-  height: 125px;
-  width: 100%;
   padding: 0 60px;
 }
 
@@ -127,7 +239,7 @@ section form .form_extra *:visited {
   text-decoration: none;
 }
 
-section form .form_extra .left {
+section form .form_extra .left, section form .form_extra .right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -147,15 +259,6 @@ section form .form_extra .left input {
   margin: auto;
 }
 
-section form .form_extra .right {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
 section form .form_extra .right * {
   margin: auto 0;
 }
@@ -165,11 +268,16 @@ section input[type=submit] {
   left: 50px;
   right: 50px;
   height: 50px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#00000000), color-stop(40%, #beb7cc));
-  background: linear-gradient(#00000000, #beb7cc 40%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#00000000), color-stop(35%, #beb7cce1));
+  background: linear-gradient(#00000000, #beb7cce1 35%);
   border: none;
   border-radius: 0 0 40px 40px;
   color: #fff;
   font-weight: 600;
+  cursor: pointer;
+}
+
+section input:hover {
+  color: #00274c;
 }
 /*# sourceMappingURL=index.css.map */
