@@ -1,0 +1,122 @@
+$colorBlueDark: #00274c;
+$colorBlueMid: #385277;
+$colorFormBG: #beb7cc;
+
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background-color: #806c91;
+}
+section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: fit-content;
+    transform: translate(-50%, -50%);
+    .profile_container {
+        position: absolute;
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        background-color: $colorBlueDark;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        svg {
+            fill: #fff;
+            stroke: $colorBlueDark;
+            stroke-width: 1px;
+        }
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        padding-top: 140px;
+        height: 420px;
+        background-color: $colorFormBG;
+        border-radius: 40px;
+        .fields {
+            height: 140px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 0 50px;
+            .field {
+                display: flex;
+                justify-content: start;
+                height: 60px;
+                width: 100%;
+                margin: 0 auto;
+                .icon_container {
+                    position: relative;
+                    width: 60px;
+                    height: inherit;
+                    padding: 15px;
+                    background-color: $colorBlueDark;
+                }
+                input:not([type=submit]) {
+                    background-color: $colorBlueMid;
+                    height: 100%;
+                    width: 100%;
+                    margin: 0;
+                    padding: 20px;
+                    color: #fff;
+                    font-size: 1.3rem;
+                    border: none;
+                    outline: none;
+                    box-shadow: none;
+                }
+                input:not([type=submit])::-webkit-input-placeholder {
+                    color: $colorFormBG;
+                }
+            }
+        }
+        .form_extra {
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+            height: 125px;
+            width: 100%;
+            padding: 0 60px;
+            * {
+                color: $colorBlueDark;
+                text-decoration: none;
+            }
+            *:visited {
+                text-decoration: none;
+            }
+            .left {
+                display: flex;
+                justify-content: center;
+                * {
+                    margin: auto 10px;
+                }
+                input {
+                    transform: scale(1.5);
+                    accent-color: $colorBlueDark;
+                    margin: auto;
+                }
+            }
+            .right {
+                display: flex;
+                justify-content: center;
+                * {
+                    margin: auto 0;
+                }
+            }
+        }
+    }
+    input[type=submit] {
+        position: absolute;
+        left: 50px;
+        right: 50px;
+        height: 50px;
+        background: linear-gradient(#00000000, $colorFormBG 40%);
+        border: none;
+        border-radius: 0 0 40px 40px;
+        color: #fff;
+        font-weight: 600;
+    }
+}
