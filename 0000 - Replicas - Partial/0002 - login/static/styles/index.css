@@ -1,0 +1,130 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: none;
+}
+
+body {
+  margin: 0;
+  background-color: #e6ebf1;
+}
+
+section {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 30px;
+  width: 340px;
+  -webkit-box-shadow: 10px 10px 17px 0 #96979c, -10px -10px 17px 0 white;
+          box-shadow: 10px 10px 17px 0 #96979c, -10px -10px 17px 0 white;
+}
+
+section .top, section .top picture img, section .top h1, section .top p, section form input[type=submit], section .extra {
+  width: 100%;
+}
+
+section .top, section form, section form .fields, section form .fields {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section .top {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 30px 0;
+}
+
+section .top picture {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  border-radius: 50%;
+  -webkit-box-shadow: 7px 7px 11px 0 #96979c, -7px -7px 11px 0 white;
+          box-shadow: 7px 7px 11px 0 #96979c, -7px -7px 11px 0 white;
+}
+
+section .top h1, section .top p {
+  text-align: center;
+}
+
+section .top h1 {
+  margin: 20px auto 0 auto;
+}
+
+section .top p {
+  margin: 10px auto;
+}
+
+section form {
+  padding: 0 30px;
+}
+
+section form .fields {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  row-gap: 20px;
+}
+
+section form .fields .field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  margin: auto;
+  height: 50px;
+  width: 90%;
+  border-radius: 20px;
+  -webkit-box-shadow: inset 7px 7px 11px 0 #96979c, inset -7px -7px 11px 0 white;
+          box-shadow: inset 7px 7px 11px 0 #96979c, inset -7px -7px 11px 0 white;
+  padding: 0 7px;
+}
+
+section form .fields .field svg {
+  height: inherit;
+  background: none;
+  padding: 15px;
+}
+
+section form .fields .field input, section form .fields .field input:focus, section form .fields .field textarea:focus, section form .fields .field select:focus {
+  outline: none;
+  background: none;
+}
+
+section form input[type=submit] {
+  margin: 25px auto 0 auto;
+  background-color: #50b5d3;
+  border-radius: 25px;
+  height: 50px;
+  -webkit-box-shadow: 7px 7px 11px 0 #96979c, -7px -7px 11px 0 white;
+          box-shadow: 7px 7px 11px 0 #96979c, -7px -7px 11px 0 white;
+  color: White;
+  font-weight: 600;
+}
+
+section .extra {
+  margin: 20px auto 70px auto;
+  text-align: center;
+}
+
+section .extra a, section .extra a:visited {
+  text-decoration: none;
+  font-size: 0.85rem;
+  color: #7c7d83;
+}
+
+section .extra span {
+  font-weight: 900;
+}
+/*# sourceMappingURL=index.css.map */

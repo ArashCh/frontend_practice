@@ -1,0 +1,103 @@
+$colorBG: #e6ebf1;
+$colorBtn: #50b5d3;
+$colorGrey: hsl(230, 3%, 50%);
+$colorShadow: hsl(230, 3%, 60%);
+$neuShadowLarge: 10px 10px 17px 0 $colorShadow,
+            -10px -10px 17px 0 white;
+$neuShadowMedium: 7px 7px 11px 0 $colorShadow,
+                -7px -7px 11px 0 white;
+$neuShadowInset: inset 7px 7px 11px 0 $colorShadow,
+                 inset -7px -7px 11px 0 white;
+
+* {
+    box-sizing: border-box;
+    border: none;
+}
+body {
+    margin: 0;
+    background-color: $colorBG;
+}
+section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 30px;
+    width: 340px;
+    box-shadow: $neuShadowLarge;
+    .top, .top picture img, .top h1, .top p, form input[type=submit], .extra {
+        width: 100%;
+    }
+    .top, form, form .fields, form .fields {
+        display: flex;
+        flex-direction: column;
+    }
+    .top {
+        justify-content: center;
+        padding: 30px 0;
+        picture {
+            width: 100px;
+            height: 100px;
+            margin: auto;
+            border-radius: 50%;
+            box-shadow: $neuShadowMedium;
+        }
+        h1, p {
+            text-align: center;
+        }
+        h1 {
+            margin: 20px auto 0 auto;
+        }
+        p {
+            margin: 10px auto;
+        }
+    }
+    form {
+        padding: 0 30px;
+        .fields {
+            justify-content: center;
+            width: 100%;
+            row-gap: 20px;
+            .field {
+                display: flex;
+                justify-content: start;
+                margin: auto;
+                height: 50px;
+                width: 90%;
+                border-radius: 20px;
+                box-shadow: $neuShadowInset;
+                padding: 0 7px;
+                svg {
+                    height: inherit;
+                    background: none;
+                    padding: 15px;
+                }
+                input, input:focus, textarea:focus, select:focus {
+                    outline: none;
+                    background: none;
+                }
+            }
+        }
+        input[type=submit] {
+            margin: 25px auto 0 auto;
+            background-color: $colorBtn;
+            border-radius: 25px;
+            height: 50px;
+            box-shadow: $neuShadowMedium;
+            color: White;
+            font-weight: 600;
+        }
+    }
+    .extra {
+        margin: 20px auto 70px auto;
+        text-align: center;
+        a, a:visited {
+            text-decoration: none;
+            font-size: 0.85rem;
+            color: $colorGrey;
+        }
+        span {
+            font-weight: 900;
+        }
+    }
+}
