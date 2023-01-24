@@ -11,6 +11,10 @@ From the start point of my front-end dev. learning path
 #### **Objective:** Simple game and keeping scores of players
 ![RPS](https://user-images.githubusercontent.com/21283020/214320561-08b56dec-8c76-41e2-9675-d0d322ffbcc5.gif)
 
+# Virtual Piano
+#### **Objective:** Working with audio
+![v piano](https://user-images.githubusercontent.com/21283020/214346094-29fb254b-d9a2-437d-97b4-95dd6f3c114d.gif)
+
 # spaceX Homepage
 #### **Objective:** A whole page
 ![spaceX](https://user-images.githubusercontent.com/21283020/214293651-5067d407-ac65-4802-b6c0-3e06a69a3a17.gif)
