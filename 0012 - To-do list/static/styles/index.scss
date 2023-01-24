@@ -16,38 +16,113 @@ body {
 }
 section {
     position: absolute;
-    top: 50%;
+    top: 100px;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
     width: 600px;
     height: fit-content;
     form {
         display: flex;
         flex-direction: column;
+        row-gap: 10px;
         background-color: $colorGreyLight;
         border-radius: 20px;
         box-shadow: 0 0 20px 0 #00000088;
         padding: 20px;
+        width: 350px;
+        margin: auto;
         .field {
-            display: flex;            
+            display: flex;       
+            justify-content: space-between;
+            column-gap: 20px;
+            label {
+                font-weight: bold;
+            }
+            input, textarea {
+                width: 200px;
+                outline: none;
+                border: none;
+                border-radius: 10px;
+                padding: 5px;
+                box-shadow: 0 0 10px 0 #00000011;
+            }
+            textarea {
+                height: 60px;
+                min-height: 60px;
+                max-height: 100px;
+                resize: vertical;
+            }
         }
         input[type=submit] {
             border: none;
-            background-color: $colorGreen;
+            background-color: $colorPurple;
+            box-shadow: 0 5px 10px 0 $colorPurple;
             height: 30px;
-            width: 60px;
-            margin: 15px auto;
+            width: 150px;
+            margin: auto;
             border-radius: 15px;
+            border: solid 1px $colorWhite;
+            cursor: pointer;
+            font-weight: bolder;
+        }
+        input[type=submit]:hover {
+            background-color: $colorWhite;
+            border: solid 2px $colorPurple;
+            color: $colorPurple;
         }
     }
     .tasks {
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        width: 500px;
+        margin: 10px auto;
+        padding: 0;
         .task {
-            display: flex;
-            border-radius: 20px;
+            display: grid;
+            grid-template: 1fr / 2fr 6fr 1fr 1fr;
+            border-radius: 10px;
             background-color: $colorGreyLight;
             box-shadow: 0 0 20px 0 #00000088;
+            width: inherit;
+            height: 30px;
+            padding: 0 0 0 10px;
+            p {
+                text-align: left;
+                vertical-align: middle;
+                padding: 0;
+                margin: auto auto auto 0;
+                font-size: 0.8rem;
+            }
+            p.title {
+                font-weight: bold;
+            }
+            button {
+                border: none;
+                outline: none;
+                padding: 0;
+                height: 30px;
+                width: fit-content;
+                margin: auto;
+                cursor: pointer;
+                background: none;
+                * {
+                    margin: 0;
+                    height: 30px;
+                    pointer-events: none;
+                }
+            }
+            .del:hover svg{
+                filter: drop-shadow(0 0 1px $colorRed);
+                padding: 1px;
+            }
+            .edit svg {
+                padding: 1px;
+            }
+            .edit:hover svg{
+                filter: drop-shadow(0 0 1px $colorBlue);
+                padding: 1px;
+            }
         }
     }
 }

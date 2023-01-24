@@ -10,10 +10,10 @@ body {
 
 section {
   position: absolute;
-  top: 50%;
+  top: 100px;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   width: 600px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -28,26 +28,66 @@ section form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  row-gap: 10px;
   background-color: #f8fafb;
   border-radius: 20px;
   -webkit-box-shadow: 0 0 20px 0 #00000088;
           box-shadow: 0 0 20px 0 #00000088;
   padding: 20px;
+  width: 350px;
+  margin: auto;
 }
 
 section form .field {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+}
+
+section form .field label {
+  font-weight: bold;
+}
+
+section form .field input, section form .field textarea {
+  width: 200px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  -webkit-box-shadow: 0 0 10px 0 #00000011;
+          box-shadow: 0 0 10px 0 #00000011;
+}
+
+section form .field textarea {
+  height: 60px;
+  min-height: 60px;
+  max-height: 100px;
+  resize: vertical;
 }
 
 section form input[type=submit] {
   border: none;
-  background-color: #b1d199;
+  background-color: #aa9aff;
+  -webkit-box-shadow: 0 5px 10px 0 #aa9aff;
+          box-shadow: 0 5px 10px 0 #aa9aff;
   height: 30px;
-  width: 60px;
-  margin: 15px auto;
+  width: 150px;
+  margin: auto;
   border-radius: 15px;
+  border: solid 1px #fff;
+  cursor: pointer;
+  font-weight: bolder;
+}
+
+section form input[type=submit]:hover {
+  background-color: #fff;
+  border: solid 2px #aa9aff;
+  color: #aa9aff;
 }
 
 section .tasks {
@@ -58,15 +98,73 @@ section .tasks {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 500px;
+  margin: 10px auto;
+  padding: 0;
 }
 
 section .tasks .task {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr;
+  -ms-grid-columns: 2fr 6fr 1fr 1fr;
+      grid-template: 1fr / 2fr 6fr 1fr 1fr;
+  border-radius: 10px;
   background-color: #f8fafb;
   -webkit-box-shadow: 0 0 20px 0 #00000088;
           box-shadow: 0 0 20px 0 #00000088;
+  width: inherit;
+  height: 30px;
+  padding: 0 0 0 10px;
+}
+
+section .tasks .task p {
+  text-align: left;
+  vertical-align: middle;
+  padding: 0;
+  margin: auto auto auto 0;
+  font-size: 0.8rem;
+}
+
+section .tasks .task p.title {
+  font-weight: bold;
+}
+
+section .tasks .task button {
+  border: none;
+  outline: none;
+  padding: 0;
+  height: 30px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  cursor: pointer;
+  background: none;
+}
+
+section .tasks .task button * {
+  margin: 0;
+  height: 30px;
+  pointer-events: none;
+}
+
+section .tasks .task .del:hover svg {
+  -webkit-filter: drop-shadow(0 0 1px #fd7564);
+          filter: drop-shadow(0 0 1px #fd7564);
+  padding: 1px;
+}
+
+section .tasks .task .edit svg {
+  padding: 1px;
+}
+
+section .tasks .task .edit:hover svg {
+  -webkit-filter: drop-shadow(0 0 1px #61b5ff);
+          filter: drop-shadow(0 0 1px #61b5ff);
+  padding: 1px;
 }
 /*# sourceMappingURL=index.css.map */
