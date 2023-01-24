@@ -1,12 +1,18 @@
-$colorBGBody: rgb(247, 223, 215);
-$colorBGForm: rgb(246, 250, 251);
+$colorPink: #f7dfd7;
+$colorGreyLight: #f8fafb;
+$colorBlue: #61b5ff;
+$colorWhite: #fff;
+$colorGreen: #b1d199;
+$colorRed: #fd7564;
+$colorYellow: #f8aa4c;
+$colorPurple: #aa9aff;
 
 * {
     box-sizing: border-box;
 }
 body {
     margin: 0;
-    background-color: $colorBGBody;
+    background-color: $colorPink;
 }
 section {
     position: absolute;
@@ -15,5 +21,23 @@ section {
     transform: translate(-50%, -50%);
     width: 600px;
     height: fit-content;
-    background-color: $colorBGForm;
+    background-color: $colorGreyLight;
+    border-radius: 20px;
+    box-shadow: 0 0 20px 0 #00000088;
+    padding: 20px;
+    form {
+        display: flex;
+        flex-direction: column;
+        .field {
+            display: flex;            
+        }
+        input[type=submit] {
+            border: none;
+            background-color: $colorGreen;
+            height: 30px;
+            width: 60px;
+            margin: 15px auto;
+        }
+    }
+
 }
