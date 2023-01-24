@@ -1,5 +1,8 @@
 # Stopwatch
 
+### Reference:
+https://mikkegoes.com/javascript-projects-for-beginners/#javascript-stopwatch
+
 ### Goal
 Working with time
 
