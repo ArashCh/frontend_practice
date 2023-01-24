@@ -1,0 +1,19 @@
+$colorBGBody: rgb(247, 223, 215);
+$colorBGForm: rgb(246, 250, 251);
+
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background-color: $colorBGBody;
+}
+section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: fit-content;
+    background-color: $colorBGForm;
+}
