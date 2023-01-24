@@ -22,7 +22,7 @@ class Task {
     }
 }
 
-document.getElementById("formAdd").addEventListener("click", (event)=>{
+document.getElementById("formAdd").addEventListener("click", ()=>{
     const formTitle = document.getElementById("formTitle").getAttribute("value");
     const formDesc = document.getElementById("formDesc").getAttribute("value");
     if (formTitle.length > 0) {
