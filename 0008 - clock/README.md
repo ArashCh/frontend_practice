@@ -1,5 +1,8 @@
 # Clock
 
+### Reference:
+https://mikkegoes.com/javascript-projects-for-beginners/#javascript-clock
+
 ### Goal
 Working with time
 
