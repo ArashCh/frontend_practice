@@ -21,13 +21,13 @@ section {
     transform: translate(-50%, -50%);
     width: 600px;
     height: fit-content;
-    background-color: $colorGreyLight;
-    border-radius: 20px;
-    box-shadow: 0 0 20px 0 #00000088;
-    padding: 20px;
     form {
         display: flex;
         flex-direction: column;
+        background-color: $colorGreyLight;
+        border-radius: 20px;
+        box-shadow: 0 0 20px 0 #00000088;
+        padding: 20px;
         .field {
             display: flex;            
         }
@@ -37,7 +37,17 @@ section {
             height: 30px;
             width: 60px;
             margin: 15px auto;
+            border-radius: 15px;
         }
     }
-
+    .tasks {
+        display: flex;
+        flex-direction: column;
+        .task {
+            display: flex;
+            border-radius: 20px;
+            background-color: $colorGreyLight;
+            box-shadow: 0 0 20px 0 #00000088;
+        }
+    }
 }

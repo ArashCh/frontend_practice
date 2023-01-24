@@ -18,11 +18,6 @@ section {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  background-color: #f8fafb;
-  border-radius: 20px;
-  -webkit-box-shadow: 0 0 20px 0 #00000088;
-          box-shadow: 0 0 20px 0 #00000088;
-  padding: 20px;
 }
 
 section form {
@@ -33,6 +28,11 @@ section form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background-color: #f8fafb;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 0 20px 0 #00000088;
+          box-shadow: 0 0 20px 0 #00000088;
+  padding: 20px;
 }
 
 section form .field {
@@ -47,5 +47,26 @@ section form input[type=submit] {
   height: 30px;
   width: 60px;
   margin: 15px auto;
+  border-radius: 15px;
+}
+
+section .tasks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section .tasks .task {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 20px;
+  background-color: #f8fafb;
+  -webkit-box-shadow: 0 0 20px 0 #00000088;
+          box-shadow: 0 0 20px 0 #00000088;
 }
 /*# sourceMappingURL=index.css.map */
