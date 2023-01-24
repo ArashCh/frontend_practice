@@ -3,7 +3,6 @@
 ![reference](https://user-images.githubusercontent.com/21283020/213937884-ccd976ae-6e30-436c-8437-c07b7f3efd6a.jpg)
 
 
-### This is the screenshot of my work
 I wanted to practice random and working with DOM
 
 ## GIF
