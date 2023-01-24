@@ -8,6 +8,8 @@ $neuShadowMedium: 7px 7px 11px 0 $colorShadow,
                 -7px -7px 11px 0 white;
 $neuShadowInset: inset 7px 7px 11px 0 $colorShadow,
                  inset -7px -7px 11px 0 white;
+$neuShadowInsetBtn: inset 7px 7px 11px 0 hsl(194, 60%, 25%),
+                 inset -7px -7px 11px 0 hsl(194, 60%, 75%);
 
 * {
     box-sizing: border-box;
@@ -86,6 +88,11 @@ section {
             box-shadow: $neuShadowMedium;
             color: White;
             font-weight: 600;
+            cursor: pointer;
+            transform: all 1s ease-in-out;
+        }
+        input[type=submit]:hover {
+            box-shadow: $neuShadowInsetBtn;
         }
     }
     .extra {
@@ -95,6 +102,10 @@ section {
             text-decoration: none;
             font-size: 0.85rem;
             color: $colorGrey;
+        }
+        a:hover {
+            color: $colorBtn;
+            text-decoration: underline;
         }
         span {
             font-weight: 900;
