@@ -9,6 +9,21 @@ body {
   background-color: #aa9aff;
 }
 
+h1 {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin: 0;
+  padding: 0;
+  font-size: 4rem;
+  font-weight: 900;
+  text-shadow: 3px 3px 5px #8066ff, -3px -3px 5px #bfb3ff, 0 0 5px #00000033;
+  color: #00000088;
+  pointer-events: none;
+}
+
 section, section form, section .tasks {
   display: -webkit-box;
   display: -ms-flexbox;
