@@ -26,8 +26,8 @@ class Task {
         this.title.setAttribute("class", "title");
         this.date.setAttribute("class", "date");
         this.desc.setAttribute("class", "date");
-        this.btnDel.setAttribute("class", "btn del");
-        this.btnEdit.setAttribute("class", "btn edit");
+        this.btnDel.setAttribute("class", "btn del no_border");
+        this.btnEdit.setAttribute("class", "btn edit no_border");
         this.tasks.appendChild(this.taskContainer);
         this.taskContainer.appendChild(this.bg);
         this.taskContainer.appendChild(this.title);
@@ -59,7 +59,7 @@ class Task {
             document.getElementById("formDesc").value = this.desc.textContent;
             const btn = document.getElementById("submit")
             btn.textContent = "Edit";
-            btn.className = "form_edit";
+            btn.className = "form_edit no_border";
         });
     }
 }
@@ -82,7 +82,7 @@ document.getElementById("submit").addEventListener("click", ()=>{
             selectedTask.desc.textContent = formDesc;
             clearForm();
             selectedTask = undefined;
-            document.getElementById("submit").className = "form_add";
+            document.getElementById("submit").className = "form_add no_border";
             document.getElementById("submit").textContent = "Add";
             Array.from(document.getElementsByClassName("task")).forEach((el)=>{
                 el.style.backgroundColor = COLORS.colorGrayLight;

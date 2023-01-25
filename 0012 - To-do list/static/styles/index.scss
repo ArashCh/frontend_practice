@@ -1,14 +1,11 @@
-$colorPink: #f7dfd7;
 $colorGrayLight: #f8fafb;
 $colorGrayLight2: #f8f9fa;
 $colorBlue: #61b5ff;
 $colorWhite: #fff;
-$colorGreen: #b1d199;
 $colorRed: #fd7564;
 $colorYellow: #f8aa4c;
 $colorPurple: #aa9aff;
 $colorPinkSoft: #ffc0cb;
-
 
 * {
     box-sizing: border-box;
@@ -18,6 +15,19 @@ body {
     margin: 0;
     background-color: $colorPurple;
 }
+section, section form, section .tasks {
+    display: flex;
+    flex-direction: column;
+}
+section form .field, section .tasks .task {
+    display: grid;
+}
+.rounded {
+    border-radius: 10px;
+}
+.no_border {
+    border: none;
+}
 section {
     position: absolute;
     top: 100px;
@@ -26,23 +36,17 @@ section {
     width: 700px;
     height: fit-content;
     background-color: $colorGrayLight2;
-    border-radius: 10px;
     padding-bottom: 10px;
     box-shadow: 10px 10px 17px 0 hsl(250, 100%, 70%),
                 -10px -10px 17px 0 hsl(250, 100%, 85%),
                 -0 0 20px 17px #00000033;
-    display: flex;
-    flex-direction: column;
     form {
-        display: flex;
-        flex-direction: column;
         row-gap: 10px;
         background: none;
         padding: 20px;
         width: 100%;
         margin: auto;
         .field {
-            display: grid;
             grid-template: 1fr / 1fr 5fr;
             column-gap: 20px;
             label {
@@ -54,8 +58,6 @@ section {
             input, textarea {
                 width: auto;
                 outline: none;
-                border: none;
-                border-radius: 10px;
                 padding: 5px;
                 box-shadow: 0 0 10px 0 #00000011;
             }
@@ -72,7 +74,6 @@ section {
         }
     }
     .form_add {
-        border: none;
         background-color: $colorPurple;
         box-shadow: 0 5px 10px 0 $colorPurple;
         height: 30px;
@@ -89,7 +90,6 @@ section {
         color: $colorPurple;
     }
     .form_edit {
-        border: none;
         background-color: $colorBlue;
         box-shadow: 0 5px 10px 0 $colorBlue;
         height: 30px;
@@ -107,8 +107,6 @@ section {
     }
     .tasks {
         position: relative;
-        display: flex;
-        flex-direction: column;
         justify-content: center;
         row-gap: 10px;
         width: 600px;
@@ -116,7 +114,6 @@ section {
         margin: 10px auto;
         padding: 0;
         .task {
-            display: grid;
             grid-template: 1fr / 1.5fr 1fr 4fr 0.4fr 0.4fr;
             border-radius: 5px;
             background-color: $colorGrayLight;
@@ -151,7 +148,6 @@ section {
                 font-weight: bold;
             }
             button {
-                border: none;
                 outline: none;
                 padding: 0;
                 height: 30px;
@@ -189,18 +185,6 @@ section {
                 color: $colorWhite;
             }
         }
-        // .task::before {
-        //     content: '';
-        //     position: absolute;
-        //     top: 0;
-        //     right: 0;
-        //     bottom: 0;
-        //     left: 0;
-        //     background-color: $colorGrayLight;
-        //     z-index: -1;
-        //     transition-duration: 0.2s;
-        //     filter: blur(5px);
-        // }
         .task:hover {
             .bg {
                 background-color: #00000088;
