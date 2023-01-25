@@ -21,13 +21,13 @@ class Task {
     btnEdit = document.createElement("button");
     tasks = document.getElementById("tasks");
     gen() {
-        this.taskContainer.setAttribute("class", "task");
-        this.bg.setAttribute("class", "bg");
+        this.taskContainer.setAttribute("class", "task animated");
+        this.bg.setAttribute("class", "bg animated");
         this.title.setAttribute("class", "title");
         this.date.setAttribute("class", "date");
         this.desc.setAttribute("class", "date");
-        this.btnDel.setAttribute("class", "btn del no_border");
-        this.btnEdit.setAttribute("class", "btn edit no_border");
+        this.btnDel.setAttribute("class", "btn del no_border animated");
+        this.btnEdit.setAttribute("class", "btn edit no_border animated");
         this.tasks.appendChild(this.taskContainer);
         this.taskContainer.appendChild(this.bg);
         this.taskContainer.appendChild(this.title);
@@ -52,6 +52,7 @@ class Task {
             
         });
         this.btnEdit.addEventListener("click", ()=>{
+            deselectTasks();
             selectedTask = this;
             this.taskContainer.style.backgroundColor = COLORS.colorPink;
             document.getElementById("formTitle").value = this.title.textContent;
@@ -59,7 +60,7 @@ class Task {
             document.getElementById("formDesc").value = this.desc.textContent;
             const btn = document.getElementById("submit")
             btn.textContent = "Edit";
-            btn.className = "form_edit no_border";
+            btn.className = "form_edit no_border animated";
         });
     }
 }
@@ -68,6 +69,12 @@ let clearForm = ()=>{
     document.getElementById("formTitle").value = "";
     document.getElementById("formDueDate").value = "";
     document.getElementById("formDesc").value = "";
+};
+
+let deselectTasks = ()=> {
+    Array.from(document.getElementsByClassName("task")).forEach((el)=>{
+        el.style.backgroundColor = COLORS.colorGrayLight;
+    });
 };
 
 document.getElementById("submit").addEventListener("click", ()=>{
@@ -82,11 +89,9 @@ document.getElementById("submit").addEventListener("click", ()=>{
             selectedTask.desc.textContent = formDesc;
             clearForm();
             selectedTask = undefined;
-            document.getElementById("submit").className = "form_add no_border";
+            document.getElementById("submit").className = "form_add no_border animated";
             document.getElementById("submit").textContent = "Add";
-            Array.from(document.getElementsByClassName("task")).forEach((el)=>{
-                el.style.backgroundColor = COLORS.colorGrayLight;
-            });
+            deselectTasks();
             return
         }
         const task = new Task(formTitle, formDueDate, formDesc);

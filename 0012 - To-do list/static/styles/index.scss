@@ -10,6 +10,7 @@ $colorPinkSoft: #ffc0cb;
 * {
     box-sizing: border-box;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    // transition-duration: 0.2s;
 }
 body {
     margin: 0;
@@ -42,6 +43,9 @@ section form .field, section .tasks .task {
 }
 .no_border {
     border: none;
+}
+.animated {
+    transition-duration: 0.2s;
 }
 section {
     position: absolute;
@@ -135,7 +139,6 @@ section {
             width: inherit;
             height: 30px;
             padding: 0 0 0 10px;
-            transition-duration: 0.2s;
             position: relative;
             .bg {
                 position: absolute;
@@ -145,7 +148,6 @@ section {
                 left: 0;
                 background-color: $colorGrayLight;
                 z-index: -1;
-                transition-duration: 0.2s;
                 filter: blur(5px);
             }
             p {
@@ -203,7 +205,7 @@ section {
         .task:hover {
             .bg {
                 background-color: #00000088;
-                transform: translateX(-5px);
+                transform: translate(-5px, 5px);
             }
             margin-top: -5px;
             margin-bottom: 5px;
