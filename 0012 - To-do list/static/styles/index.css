@@ -92,7 +92,7 @@ section form .field input:hover, section form .field textarea:hover {
           box-shadow: 0 0 10px 0 #00000011, inset 0 0 0 1px #61b5ff;
 }
 
-section .submit {
+section .form_add {
   border: none;
   background-color: #aa9aff;
   -webkit-box-shadow: 0 5px 10px 0 #aa9aff;
@@ -106,10 +106,30 @@ section .submit {
   cursor: pointer;
 }
 
-section .submit:hover {
+section .form_add:hover {
   background-color: #fff;
   border: solid 2px #aa9aff;
   color: #aa9aff;
+}
+
+section .form_edit {
+  border: none;
+  background-color: #61b5ff;
+  -webkit-box-shadow: 0 5px 10px 0 #61b5ff;
+          box-shadow: 0 5px 10px 0 #61b5ff;
+  height: 30px;
+  width: 150px;
+  margin: 0 auto 15px auto;
+  border-radius: 15px;
+  border: solid 1px #fff;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+section .form_edit:hover {
+  background-color: #fff;
+  border: solid 2px #61b5ff;
+  color: #61b5ff;
 }
 
 section .tasks {
