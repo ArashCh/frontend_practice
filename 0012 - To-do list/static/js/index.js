@@ -3,45 +3,60 @@ const SVG_DEL = '<svg viewBox="0 0 1000 1000" data-name="Layer 2" id="Layer_2" f
 const SVG_EDIT = '<svg viewBox="0 0 24 24" fill="none" ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4.5 17.2071V19C4.5 19.2761 4.72386 19.5 5 19.5H6.79289C6.9255 19.5 7.05268 19.4473 7.14645 19.3536L15.6452 10.8548L13.1452 8.35485L4.64645 16.8536C4.55268 16.9473 4.5 17.0745 4.5 17.2071Z" stroke="#61b5ff"></path> <path d="M15.0897 6.4103L17.5897 8.9103L18.7929 7.70711C19.1834 7.31658 19.1834 6.68342 18.7929 6.2929L17.7071 5.20711C17.3166 4.81658 16.6834 4.81658 16.2929 5.20711L15.0897 6.4103Z" stroke="#61b5ff"></path> </g></svg>'
 
 class Task {
-    constructor(titleVal, descVal="") {
+    constructor(titleVal, dateVal="", descVal="") {
         this.titleVal = titleVal;
+        this.dateVal = dateVal;
         this.descVal = descVal;
-        console.log(this.titleVal)
     }
-    tag = $("ol");
-    title = $("p").addClass("title").text(this.titleVal);
-    desc = $("p").addClass("desc").text(this.descVal);
-    btnDel = $("button").addClass("btn del").append(SVG_DEL);
-    btnEdit = $("button").addClass("btn edit").append(SVG_EDIT);
+    taskContainer = document.createElement("ol");
+    bg = document.createElement("div");
+    title = document.createElement("p");
+    date = document.createElement("p");
+    desc = document.createElement("p");
+    btnDel = document.createElement("button");
+    btnEdit = document.createElement("button");
+    tasks = document.getElementById("tasks");
     gen() {
-        this.tag.append(this.title);
-        this.tag.append(this.desc);
-        this.tag.append(this.btnDel);
-        this.tag.append(this.btnEdit);
-        $("#tasks").append(this.tag);
+        this.taskContainer.setAttribute("class", "task");
+        this.bg.setAttribute("class", "bg");
+        this.title.setAttribute("class", "title");
+        this.date.setAttribute("class", "date");
+        this.desc.setAttribute("class", "date");
+        this.btnDel.setAttribute("class", "btn del");
+        this.btnEdit.setAttribute("class", "btn edit");
+        this.tasks.appendChild(this.taskContainer);
+        this.taskContainer.appendChild(this.bg);
+        this.taskContainer.appendChild(this.title);
+        this.taskContainer.appendChild(this.date);
+        this.taskContainer.appendChild(this.desc);
+        this.taskContainer.appendChild(this.btnDel);
+        this.taskContainer.appendChild(this.btnEdit);
+        this.title.textContent = this.titleVal;
+        this.date.textContent = this.dateVal;
+        this.desc.textContent = this.descVal;
+        this.btnDel.innerHTML = SVG_DEL;
+        this.btnEdit.innerHTML = SVG_EDIT;
     }
 }
 
-document.getElementById("formAdd").addEventListener("click", ()=>{
-    const formTitle = document.getElementById("formTitle").getAttribute("value");
-    const formDesc = document.getElementById("formDesc").getAttribute("value");
+document.getElementById("submit").addEventListener("click", ()=>{
+    const formTitle = document.getElementById("formTitle").value;
+    const formDueDate = document.getElementById("formDueDate").value;
+    const formDesc = document.getElementById("formDesc").value;
+    
     if (formTitle.length > 0) {
-        const task = new Task(formTitle, formDesc);
-        console.log(task);
+        const task = new Task(formTitle, formDueDate, formDesc);
         task.gen();
     }
-    // if (formTitle.length > 0) {
-    //     const task = document.createElement("ol");
-    //     task.setAttribute("class", "task");
-    //     const title = document.createElement("p");
-    //     task.setAttribute("class", "title");
-    //     task.textContent = formTitle;
-    //     const desc = document.createElement("p");
-    //     desc.setAttribute("class", "desc");
-    //     desc.textContent = formDesc;
-    //     const desc = document.createElement("p");
-    //     desc.setAttribute("class", "desc");
-    //     desc.textContent = formDesc;
-
-    // }
 });
+
+// creating dummy tasks
+(()=>{
+    for (let i=1 ; i<=7 ; i++) {
+        const title = "Title_"+(i).toString();
+        const date = "2023-01-0"+(i).toString();
+        const desc = "desc desc desc desc ("+(i).toString()+")";
+        const task = new Task(title, date, desc);
+        task.gen();
+    }
+})();

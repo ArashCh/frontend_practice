@@ -1,11 +1,12 @@
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 body {
   margin: 0;
-  background-color: #f7dfd7;
+  background-color: #aa9aff;
 }
 
 section {
@@ -14,10 +15,22 @@ section {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  width: 600px;
+  width: 700px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  padding-bottom: 10px;
+  -webkit-box-shadow: 10px 10px 17px 0 #8066ff, -10px -10px 17px 0 #bfb3ff, 0 0 20px 17px #00000033;
+          box-shadow: 10px 10px 17px 0 #8066ff, -10px -10px 17px 0 #bfb3ff, 0 0 20px 17px #00000033;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 section form {
@@ -29,22 +42,18 @@ section form {
       -ms-flex-direction: column;
           flex-direction: column;
   row-gap: 10px;
-  background-color: #f8fafb;
-  border-radius: 20px;
-  -webkit-box-shadow: 0 0 20px 0 #00000088;
-          box-shadow: 0 0 20px 0 #00000088;
+  background: none;
   padding: 20px;
-  width: 350px;
+  width: 100%;
   margin: auto;
 }
 
 section form .field {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr;
+  -ms-grid-columns: 1fr 5fr;
+      grid-template: 1fr / 1fr 5fr;
   -webkit-column-gap: 20px;
           column-gap: 20px;
 }
@@ -53,8 +62,16 @@ section form .field label {
   font-weight: bold;
 }
 
+section form .field label::-moz-selection {
+  background-color: #61b5ff;
+}
+
+section form .field label::selection {
+  background-color: #61b5ff;
+}
+
 section form .field input, section form .field textarea {
-  width: 200px;
+  width: auto;
   outline: none;
   border: none;
   border-radius: 10px;
@@ -67,30 +84,36 @@ section form .field textarea {
   height: 60px;
   min-height: 60px;
   max-height: 100px;
-  resize: vertical;
+  resize: none;
 }
 
-section form input[type=submit] {
+section form .field input:hover, section form .field textarea:hover {
+  -webkit-box-shadow: 0 0 10px 0 #00000011, inset 0 0 0 1px #61b5ff;
+          box-shadow: 0 0 10px 0 #00000011, inset 0 0 0 1px #61b5ff;
+}
+
+section .submit {
   border: none;
   background-color: #aa9aff;
   -webkit-box-shadow: 0 5px 10px 0 #aa9aff;
           box-shadow: 0 5px 10px 0 #aa9aff;
   height: 30px;
   width: 150px;
-  margin: auto;
+  margin: 0 auto 15px auto;
   border-radius: 15px;
   border: solid 1px #fff;
-  cursor: pointer;
   font-weight: bolder;
+  cursor: pointer;
 }
 
-section form input[type=submit]:hover {
+section .submit:hover {
   background-color: #fff;
   border: solid 2px #aa9aff;
   color: #aa9aff;
 }
 
 section .tasks {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -101,7 +124,11 @@ section .tasks {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 500px;
+  row-gap: 10px;
+  width: 600px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   margin: 10px auto;
   padding: 0;
 }
@@ -110,15 +137,30 @@ section .tasks .task {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 1fr;
-  -ms-grid-columns: 2fr 6fr 1fr 1fr;
-      grid-template: 1fr / 2fr 6fr 1fr 1fr;
-  border-radius: 10px;
+  -ms-grid-columns: 1.5fr 1fr 4fr 0.4fr 0.4fr;
+      grid-template: 1fr / 1.5fr 1fr 4fr 0.4fr 0.4fr;
+  border-radius: 5px;
   background-color: #f8fafb;
-  -webkit-box-shadow: 0 0 20px 0 #00000088;
-          box-shadow: 0 0 20px 0 #00000088;
   width: inherit;
   height: 30px;
   padding: 0 0 0 10px;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  position: relative;
+}
+
+section .tasks .task .bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #f8fafb;
+  z-index: -1;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
 }
 
 section .tasks .task p {
@@ -127,6 +169,15 @@ section .tasks .task p {
   padding: 0;
   margin: auto auto auto 0;
   font-size: 0.8rem;
+  pointer-events: none;
+}
+
+section .tasks .task p::-moz-selection {
+  background-color: #ffc0cb;
+}
+
+section .tasks .task p::selection {
+  background-color: #ffc0cb;
 }
 
 section .tasks .task p.title {
@@ -166,5 +217,36 @@ section .tasks .task .edit:hover svg {
   -webkit-filter: drop-shadow(0 0 1px #61b5ff);
           filter: drop-shadow(0 0 1px #61b5ff);
   padding: 1px;
+}
+
+section .tasks .header {
+  pointer-events: none;
+}
+
+section .tasks .header p {
+  font-weight: 900;
+  text-align: center;
+  color: #f8aa4c;
+}
+
+section .tasks .header p::-moz-selection {
+  background-color: #fd7564;
+  color: #fff;
+}
+
+section .tasks .header p::selection {
+  background-color: #fd7564;
+  color: #fff;
+}
+
+section .tasks .task:hover {
+  margin-top: -5px;
+  margin-bottom: 5px;
+}
+
+section .tasks .task:hover .bg {
+  background-color: #00000088;
+  -webkit-transform: translateX(-5px);
+          transform: translateX(-5px);
 }
 /*# sourceMappingURL=index.css.map */
