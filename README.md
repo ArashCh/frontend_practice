@@ -23,6 +23,11 @@ From the start point of my front-end dev. learning path
 ###### *Code available in "0010 - virtual piano"*
 ![v piano](https://user-images.githubusercontent.com/21283020/214346094-29fb254b-d9a2-437d-97b4-95dd6f3c114d.gif)
 
+# Digital and Analog Clocks
+#### **Objective:** Working with time and some styling challanges
+###### *Code available in "0008 - clock"*
+![clocks](https://user-images.githubusercontent.com/21283020/215102473-45678e30-a917-4682-bace-dc5afd1606f7.gif)
+
 # spaceX Homepage
 #### **Objective:** A whole page
 ###### *Code available in "0000 - Replicas Pages/0001 - spaceX homepage"*
