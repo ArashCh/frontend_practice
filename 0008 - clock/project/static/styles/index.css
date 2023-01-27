@@ -50,6 +50,7 @@ section .clock {
 section .digital .frames {
   margin: auto;
   height: 180px;
+  width: 300px;
 }
 
 section .digital .frames .frame {
