@@ -20,7 +20,7 @@ header {
 }
 
 header h1 {
-  color: #98fe1c;
+  color: #fff;
   text-align: center;
   text-transform: capitalize;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -108,93 +108,199 @@ section .analog .frame .clock_face .number {
   position: absolute;
   font-size: 1.5rem;
   text-align: center;
-  width: 20px;
-  height: 20px;
+  width: 100%;
+  height: 100%;
   line-height: 20px;
   color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  padding: 0;
 }
 
-section .analog .frame .clock_face .number-1, section .analog .frame .clock_face .number11 {
-  top: 18%;
-}
-
-section .analog .frame .clock_face .number-1 {
-  left: 75%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-section .analog .frame .clock_face .number-2, section .analog .frame .clock_face .number-10 {
-  top: 26%;
-}
-
-section .analog .frame .clock_face .number-2 {
-  left: 85%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-section .analog .frame .clock_face .number-3 {
-  top: 65%;
-  left: 88%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-section .analog .frame .clock_face .number-4 {
-  top: 80%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-section .analog .frame .clock_face .number-5 {
-  top: 65%;
-  left: 12%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-section .analog .frame .clock_face .number-6 {
-  top: 45%;
-  left: 5%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-section .analog .frame .clock_face .number-7 {
-  top: 25%;
-  left: 12%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-section .analog .frame .clock_face .number-8 {
-  top: 10%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-section .analog .frame .clock_face .number-12 {
-  top: 10%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-section .analog p {
-  position: absolute;
+section .analog .frame .clock_face .number p {
+  margin: 0 auto;
+  padding: 0;
   color: #fff;
   font-size: 25px;
-  font-weight: 900;
-  top: 40px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
 }
 
-section .analog .num1, section .analog .num11 {
-  top: 60px;
+section .analog .frame .clock_face .number.number-1 {
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+}
+
+section .analog .frame .clock_face .number.number-1 p {
+  -webkit-transform: rotate(-30deg);
+          transform: rotate(-30deg);
+}
+
+section .analog .frame .clock_face .number.number-2 {
+  -webkit-transform: rotate(60deg);
+          transform: rotate(60deg);
+}
+
+section .analog .frame .clock_face .number.number-2 p {
+  -webkit-transform: rotate(-60deg);
+          transform: rotate(-60deg);
+}
+
+section .analog .frame .clock_face .number.number-3 {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+section .analog .frame .clock_face .number.number-3 p {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+section .analog .frame .clock_face .number.number-4 {
+  -webkit-transform: rotate(120deg);
+          transform: rotate(120deg);
+}
+
+section .analog .frame .clock_face .number.number-4 p {
+  -webkit-transform: rotate(-120deg);
+          transform: rotate(-120deg);
+}
+
+section .analog .frame .clock_face .number.number-5 {
+  -webkit-transform: rotate(150deg);
+          transform: rotate(150deg);
+}
+
+section .analog .frame .clock_face .number.number-5 p {
+  -webkit-transform: rotate(-150deg);
+          transform: rotate(-150deg);
+}
+
+section .analog .frame .clock_face .number.number-6 {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+section .analog .frame .clock_face .number.number-6 p {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+section .analog .frame .clock_face .number.number-7 {
+  -webkit-transform: rotate(-150deg);
+          transform: rotate(-150deg);
+}
+
+section .analog .frame .clock_face .number.number-7 p {
+  -webkit-transform: rotate(150deg);
+          transform: rotate(150deg);
+}
+
+section .analog .frame .clock_face .number.number-8 {
+  -webkit-transform: rotate(-120deg);
+          transform: rotate(-120deg);
+}
+
+section .analog .frame .clock_face .number.number-8 p {
+  -webkit-transform: rotate(120deg);
+          transform: rotate(120deg);
+}
+
+section .analog .frame .clock_face .number.number-9 {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+section .analog .frame .clock_face .number.number-9 p {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+section .analog .frame .clock_face .number.number-10 {
+  -webkit-transform: rotate(-60deg);
+          transform: rotate(-60deg);
+}
+
+section .analog .frame .clock_face .number.number-10 p {
+  -webkit-transform: rotate(60deg);
+          transform: rotate(60deg);
+}
+
+section .analog .frame .clock_face .number.number-11 {
+  -webkit-transform: rotate(-30deg);
+          transform: rotate(-30deg);
+}
+
+section .analog .frame .clock_face .number.number-11 p {
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+}
+
+section .analog .frame .clock_face .gear {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  padding: 0;
+}
+
+section .analog .frame .clock_face .gear .hand {
+  position: absolute;
+  width: 5px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
+  border-radius: 2px;
+}
+
+section .analog .frame .clock_face .gear .origin {
+  width: 15px;
+  height: 15px;
+  border: solid 3px #181818;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+section .analog .frame .clock_face .hour .hand {
+  background-color: #98fe1c;
+  -webkit-box-shadow: 0 0 20px 3px #98fe1c44;
+          box-shadow: 0 0 20px 3px #98fe1c44;
+  height: 50px;
+}
+
+section .analog .frame .clock_face .minute .hand {
+  background-color: #1cd3fe;
+  -webkit-box-shadow: 0 0 20px 3px #1cd3fe44;
+          box-shadow: 0 0 20px 3px #1cd3fe44;
+  height: 65px;
+}
+
+section .analog .frame .clock_face .second .hand {
+  background-color: #fe1c1c;
+  -webkit-box-shadow: 0 0 10px 3px #fe1c1c88;
+          box-shadow: 0 0 10px 3px #fe1c1c88;
+  height: 70px;
+  width: 2px;
 }
 /*# sourceMappingURL=index.css.map */

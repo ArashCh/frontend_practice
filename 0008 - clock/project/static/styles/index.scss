@@ -1,8 +1,10 @@
 $colorBlack: #181818;
 $colorGreen: #98fe1c;
+$colorRed: #fe1c1c;
 $colorBlue: #1cd3fe;
 $colorShadow: #1cd5fe52;
 $glowBlue: hsl(191, 99%, 65%);
+$degree: 30deg;
 
 * {
     box-sizing: border-box;
@@ -19,7 +21,7 @@ header {
     justify-content: center;
     align-content: center;
     h1 {
-        color: $colorGreen;
+        color: #fff;
         text-align: center;
         text-transform: capitalize;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -87,73 +89,132 @@ section {
                     position: absolute;
                     font-size: 1.5rem;
                     text-align: center;
-                    width: 20px;
-                    height: 20px;
+                    width: 100%;
+                    height: 100%;
                     line-height: 20px;
-                    color: #fff;   
+                    color: #fff;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: start;
+                    padding: 0;
+                    p {
+                        margin: 0 auto;
+                        padding: 0;
+                        color: #fff;
+                        font-size: 25px;
+                    }
+                    &.number-1 {
+                        transform: rotate(30deg);
+                        p {
+                            transform: rotate(-30deg);
+                        }
+                    }
+                    &.number-2 {
+                        transform: rotate(60deg);
+                        p {
+                            transform: rotate(-60deg);
+                        }
+                    }
+                    &.number-3 {
+                        transform: rotate(90deg);
+                        p {
+                            transform: rotate(-90deg);
+                        }
+                    }
+                    &.number-4 {
+                        transform: rotate(120deg);
+                        p {
+                            transform: rotate(-120deg);
+                        }
+                    }
+                    &.number-5 {
+                        transform: rotate(150deg);
+                        p {
+                            transform: rotate(-150deg);
+                        }
+                    }
+                    &.number-6 {
+                        transform: rotate(180deg);
+                        p {
+                            transform: rotate(-180deg);
+                        }
+                    }
+                    &.number-7 {
+                        transform: rotate(-150deg);
+                        p {
+                            transform: rotate(150deg);
+                        }
+                    }
+                    &.number-8 {
+                        transform: rotate(-120deg);
+                        p {
+                            transform: rotate(120deg);
+                        }
+                    }
+                    &.number-9 {
+                        transform: rotate(-90deg);
+                        p {
+                            transform: rotate(90deg);
+                        }
+                    }
+                    &.number-10 {
+                        transform: rotate(-60deg);
+                        p {
+                            transform: rotate(60deg);
+                        }
+                    }
+                    &.number-11 {
+                        transform: rotate(-30deg);
+                        p {
+                            transform: rotate(30deg);
+                        }
+                    }
                 }
-                .number-1, .number11 {
-                    top: 18%;
+                .gear {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: start;
+                    padding: 0;
+                    .hand {
+                        position: absolute;
+                        width: 5px;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -100%);
+                        border-radius: 2px;
+                    }
+                    .origin {
+                        width: 15px;
+                        height: 15px;
+                        border: solid 3px $colorBlack;
+                        border-radius: 50%;
+                        background-color: #fff;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
                 }
-                .number-1 {
-                    left: 75%;
-                    transform: translate(-50%, -50%);
+                .hour .hand {
+                    background-color: $colorGreen;
+                    box-shadow: 0 0 20px 3px #98fe1c44;
+                    height: 50px;
                 }
-                .number-2, .number-10 {
-                    top: 26%;
+                .minute .hand {
+                    background-color: $colorBlue;
+                    box-shadow: 0 0 20px 3px #1cd3fe44;
+                    height: 65px;
                 }
-                .number-2 {
-                    left: 85%;
-                    transform: translate(-50%, -50%);
-                }
-                .number-3 {
-                    top: 65%;
-                    left: 88%;
-                    transform: translate(-50%, -50%);
-                }
-                .number-4 {
-                    top: 80%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                }
-                .number-5 {
-                    top: 65%;
-                    left: 12%;
-                    transform: translate(-50%, -50%);
-                }
-                .number-6 {
-                    top: 45%;
-                    left: 5%;
-                    transform: translate(-50%, -50%);
-                }
-                .number-7 {
-                    top: 25%;
-                    left: 12%;
-                    transform: translate(-50%, -50%);
-                }
-                .number-8 {
-                    top: 10%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                }
-                .number-12 {
-                    top: 10%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
+                .second .hand {
+                    background-color: $colorRed;
+                    box-shadow: 0 0 10px 3px #fe1c1c88;
+                    height: 70px;
+                    width: 2px;
                 }
             }
-        }
-        p {
-            position: absolute;
-            color: #fff;
-            font-size: 25px;
-            font-weight: 900;
-            top: 40px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        .num1, .num11 {
-            top: 60px;
         }
     }
 }
