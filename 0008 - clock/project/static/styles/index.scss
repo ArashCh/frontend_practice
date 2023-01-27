@@ -4,13 +4,10 @@ $colorRed: #fe1c1c;
 $colorBlue: #1cd3fe;
 $colorShadow: #1cd5fe52;
 $glowBlue: hsl(191, 99%, 65%);
-$degree: 30deg;
 
 * {
     box-sizing: border-box;
-    // outline-style: solid;
-    // outline-width: 5px;
-    // outline-color: rgba(0, 128, 0, 0.171);
+    pointer-events: none;
 }
 body {
     margin: 0;
